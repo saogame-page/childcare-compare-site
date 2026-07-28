@@ -1,0 +1,372 @@
+/* =========================================================
+   childcare-compare-site（仮称）共通スタイル
+   コンセプト: やさしい・清潔感・可愛すぎない・スマホ最優先
+   ========================================================= */
+
+:root {
+  /* カラーパレット（やわらかいグリーン×クリーム×スミ色） */
+  --c-bg: #fbfaf7;          /* ベース背景（クリーム寄りの白） */
+  --c-surface: #ffffff;     /* カード背景 */
+  --c-ink: #3d4442;         /* 本文（真っ黒を避けたスミ色） */
+  --c-ink-soft: #6b7472;    /* 補足テキスト */
+  --c-primary: #4f8a7b;     /* メイン（落ち着いたグリーン） */
+  --c-primary-deep: #3d6e62;
+  --c-primary-pale: #e9f2ef;
+  --c-accent: #e8a87c;      /* アクセント（くすみアプリコット） */
+  --c-accent-pale: #fbf0e7;
+  --c-line: #e5e2da;        /* 罫線 */
+  --c-note: #9a8f6e;        /* 注記 */
+  --c-note-bg: #f6f2e7;     /* 注記背景 */
+  --c-unverified: #8d8d8d;  /* 未確認バッジ */
+  --c-unverified-bg: #efefef;
+  --radius: 14px;
+  --radius-s: 8px;
+  --shadow: 0 2px 10px rgba(80, 90, 85, 0.07);
+  --maxw: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+body {
+  margin: 0;
+  background: var(--c-bg);
+  color: var(--c-ink);
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI",
+    "Yu Gothic", "Meiryo", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  -webkit-text-size-adjust: 100%;
+}
+
+img { max-width: 100%; height: auto; }
+
+a { color: var(--c-primary-deep); }
+a:hover { opacity: 0.85; }
+
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
+
+/* ---------- ヘッダー ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(251, 250, 247, 0.94);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--c-line);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; min-height: 60px;
+}
+.brand { display: flex; align-items: baseline; gap: 8px; text-decoration: none; }
+.brand-logo {
+  font-weight: 700; font-size: 1.15rem; color: var(--c-primary-deep);
+  letter-spacing: 0.02em;
+}
+.brand-logo .brand-dot { color: var(--c-accent); }
+.brand-tag { font-size: 0.7rem; color: var(--c-ink-soft); }
+
+.global-nav ul {
+  display: flex; gap: 4px; list-style: none; margin: 0; padding: 0;
+}
+.global-nav a {
+  display: block; padding: 8px 12px; border-radius: var(--radius-s);
+  text-decoration: none; font-size: 0.9rem; color: var(--c-ink);
+}
+.global-nav a:hover, .global-nav a[aria-current="page"] {
+  background: var(--c-primary-pale); color: var(--c-primary-deep); opacity: 1;
+}
+
+.nav-toggle {
+  display: none; border: 1px solid var(--c-line); background: var(--c-surface);
+  border-radius: var(--radius-s); padding: 8px 12px; font-size: 0.85rem;
+  color: var(--c-ink); cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .nav-toggle { display: inline-block; }
+  .global-nav { display: none; width: 100%; }
+  .global-nav.is-open { display: block; padding-bottom: 10px; }
+  .global-nav ul { flex-direction: column; }
+  .header-inner { flex-wrap: wrap; }
+}
+
+/* ---------- PR表記バー ---------- */
+.pr-note {
+  background: var(--c-note-bg); color: var(--c-note);
+  font-size: 0.78rem; line-height: 1.6;
+  padding: 6px 0;
+}
+.pr-note a { color: inherit; }
+
+/* ---------- ヒーロー ---------- */
+.hero { padding: 56px 0 40px; }
+.hero-copy {
+  font-size: clamp(1.5rem, 4.5vw, 2.3rem);
+  font-weight: 700; line-height: 1.5; margin: 0 0 16px;
+  color: var(--c-primary-deep);
+}
+.hero-lead { max-width: 620px; color: var(--c-ink); margin: 0 0 8px; }
+.hero-sub { font-size: 0.85rem; color: var(--c-ink-soft); }
+
+/* ---------- セクション共通 ---------- */
+.section { padding: 40px 0; }
+.section-alt { background: var(--c-primary-pale); }
+.section-title {
+  font-size: 1.35rem; font-weight: 700; margin: 0 0 8px;
+  padding-left: 14px; border-left: 5px solid var(--c-primary);
+  line-height: 1.5;
+}
+.section-lead { color: var(--c-ink-soft); font-size: 0.92rem; margin-top: 0; }
+
+h3 { font-size: 1.08rem; margin: 1.6em 0 0.6em; }
+h4 { font-size: 1rem; margin: 1.4em 0 0.4em; }
+
+/* ---------- カード ---------- */
+.card {
+  background: var(--c-surface); border: 1px solid var(--c-line);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 20px;
+}
+.card-grid {
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  margin-top: 20px;
+}
+
+.category-card { display: flex; flex-direction: column; gap: 8px; }
+.category-card h3 { margin: 0; font-size: 1.05rem; }
+.category-card p { margin: 0; font-size: 0.88rem; color: var(--c-ink-soft); flex: 1; }
+.category-card .cat-emoji { font-size: 1.7rem; }
+.category-card.is-coming { opacity: 0.72; background: #fdfdfb; }
+
+.badge {
+  display: inline-block; font-size: 0.72rem; font-weight: 600;
+  padding: 2px 10px; border-radius: 999px; vertical-align: middle;
+}
+.badge-open { background: var(--c-primary-pale); color: var(--c-primary-deep); }
+.badge-soon { background: var(--c-unverified-bg); color: var(--c-unverified); }
+.badge-new { background: var(--c-accent-pale); color: #b0713e; }
+
+/* ボタン */
+.btn {
+  display: inline-block; text-decoration: none; text-align: center;
+  border-radius: 999px; padding: 12px 26px; font-weight: 600;
+  font-size: 0.95rem; border: none; cursor: pointer;
+  transition: transform 0.06s ease;
+}
+.btn:active { transform: scale(0.98); }
+.btn-primary { background: var(--c-primary); color: #fff; }
+.btn-primary:hover { background: var(--c-primary-deep); opacity: 1; }
+.btn-ghost {
+  background: transparent; color: var(--c-primary-deep);
+  border: 1.5px solid var(--c-primary);
+}
+
+/* ---------- 記事本文 ---------- */
+.article { max-width: 780px; }
+.article p { margin: 0.9em 0; }
+.article ul { padding-left: 1.3em; }
+.article li { margin: 0.35em 0; }
+
+.note-box {
+  background: var(--c-note-bg); border-radius: var(--radius-s);
+  padding: 14px 16px; font-size: 0.85rem; color: #7a7052;
+  margin: 18px 0;
+}
+.info-box {
+  background: var(--c-primary-pale); border-radius: var(--radius-s);
+  padding: 14px 16px; font-size: 0.9rem; margin: 18px 0;
+}
+
+/* ---------- タイプ解説 ---------- */
+.type-grid {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  margin: 18px 0;
+}
+.type-card { padding: 16px; }
+.type-card h3 { margin: 0 0 6px; font-size: 1rem; color: var(--c-primary-deep); }
+.type-card p { margin: 0; font-size: 0.87rem; }
+.type-card .type-meta { font-size: 0.78rem; color: var(--c-ink-soft); display: block; margin-top: 8px; }
+
+/* ---------- 比較表 ---------- */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-s);
+  background: var(--c-surface);
+}
+.table-scroll-hint {
+  font-size: 0.78rem; color: var(--c-ink-soft); margin: 6px 2px;
+}
+.compare-table {
+  border-collapse: collapse; width: 100%; min-width: 1180px;
+  font-size: 0.85rem; line-height: 1.6;
+}
+.compare-table th, .compare-table td {
+  border-bottom: 1px solid var(--c-line);
+  border-right: 1px solid #f0eee8;
+  padding: 10px 12px; text-align: left; vertical-align: top;
+}
+.compare-table thead th {
+  background: var(--c-primary-pale); color: var(--c-primary-deep);
+  font-size: 0.8rem; white-space: nowrap; position: sticky; top: 0;
+}
+.compare-table tbody th {
+  background: #fdfcf9; font-weight: 600; min-width: 11em;
+  position: sticky; left: 0; box-shadow: 1px 0 0 var(--c-line);
+}
+.compare-table .row-label { white-space: nowrap; }
+
+.chip-unverified, .chip-recheck {
+  display: inline-block; font-size: 0.72rem; padding: 1px 8px;
+  border-radius: 999px; white-space: nowrap;
+}
+.chip-unverified { background: var(--c-unverified-bg); color: var(--c-unverified); }
+.chip-recheck { background: var(--c-accent-pale); color: #b0713e; }
+
+/* ---------- 商品カード ---------- */
+.product-card { margin-top: 22px; scroll-margin-top: 80px; }
+.product-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; }
+.product-head h3 { margin: 0; font-size: 1.1rem; }
+.product-maker { font-size: 0.82rem; color: var(--c-ink-soft); }
+.product-price { font-weight: 700; color: var(--c-primary-deep); font-size: 0.95rem; }
+.product-price small { font-weight: 400; color: var(--c-ink-soft); }
+
+.spec-list {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 4px 18px; list-style: none; margin: 12px 0; padding: 0;
+  font-size: 0.86rem;
+}
+.spec-list li { padding-left: 1.1em; text-indent: -1.1em; }
+.spec-list li::before { content: "・"; color: var(--c-primary); }
+
+.fit-box {
+  background: var(--c-primary-pale); border-radius: var(--radius-s);
+  padding: 10px 14px; font-size: 0.87rem; margin-top: 10px;
+}
+.fit-box strong { color: var(--c-primary-deep); }
+
+/* 購入リンク仮置き */
+.shoplinks {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px;
+  align-items: center;
+}
+.shoplink {
+  display: inline-block; padding: 9px 16px; border-radius: 999px;
+  font-size: 0.83rem; font-weight: 600; text-decoration: none;
+  border: 1.5px dashed #c9c5bb; color: #8f8b81; background: #faf9f6;
+  cursor: default;
+}
+.shoplink-note { font-size: 0.75rem; color: var(--c-ink-soft); }
+
+/* ---------- 診断 ---------- */
+.quiz {
+  background: var(--c-surface); border: 1px solid var(--c-line);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 22px; margin-top: 20px;
+}
+.quiz-progress { font-size: 0.8rem; color: var(--c-ink-soft); margin-bottom: 8px; }
+.quiz-q { font-size: 1.05rem; font-weight: 700; margin: 0 0 14px; }
+.quiz-options { display: grid; gap: 10px; }
+.quiz-option {
+  display: block; width: 100%; text-align: left;
+  background: var(--c-bg); border: 1.5px solid var(--c-line);
+  border-radius: var(--radius-s); padding: 12px 16px;
+  font-size: 0.95rem; color: var(--c-ink); cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+.quiz-option:hover, .quiz-option:focus-visible {
+  border-color: var(--c-primary); background: var(--c-primary-pale);
+}
+.quiz-controls { margin-top: 16px; display: flex; gap: 10px; }
+.quiz-restart {
+  background: none; border: none; color: var(--c-ink-soft);
+  font-size: 0.83rem; text-decoration: underline; cursor: pointer; padding: 4px;
+}
+.quiz-result-type {
+  font-size: 1.2rem; font-weight: 700; color: var(--c-primary-deep);
+  margin: 4px 0 10px;
+}
+.quiz-result-note { font-size: 0.8rem; color: var(--c-ink-soft); }
+.quiz-candidates { display: grid; gap: 10px; margin: 14px 0; }
+.quiz-candidate {
+  border: 1px solid var(--c-line); border-radius: var(--radius-s);
+  padding: 12px 14px; background: var(--c-bg);
+  font-size: 0.9rem; text-decoration: none; color: var(--c-ink);
+  display: block;
+}
+.quiz-candidate:hover { border-color: var(--c-primary); opacity: 1; }
+.quiz-candidate strong { color: var(--c-primary-deep); }
+.quiz-candidate span { display: block; font-size: 0.8rem; color: var(--c-ink-soft); }
+
+/* ---------- FAQ ---------- */
+.faq-item {
+  background: var(--c-surface); border: 1px solid var(--c-line);
+  border-radius: var(--radius-s); margin-top: 10px; overflow: hidden;
+}
+.faq-item summary {
+  cursor: pointer; padding: 14px 16px; font-weight: 600; font-size: 0.95rem;
+  list-style: none; position: relative; padding-right: 40px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "＋"; position: absolute; right: 16px; top: 50%;
+  transform: translateY(-50%); color: var(--c-primary); font-weight: 700;
+}
+.faq-item[open] summary::after { content: "－"; }
+.faq-item .faq-a { padding: 0 16px 14px; font-size: 0.9rem; }
+.faq-item summary .q-mark { color: var(--c-primary); margin-right: 6px; }
+
+/* ---------- 出典 ---------- */
+.sources { font-size: 0.82rem; }
+.sources ul { padding-left: 1.2em; }
+.sources li { margin: 0.3em 0; overflow-wrap: anywhere; }
+
+/* ---------- 目次 ---------- */
+.toc {
+  background: var(--c-surface); border: 1px solid var(--c-line);
+  border-radius: var(--radius-s); padding: 14px 18px; font-size: 0.88rem;
+}
+.toc-title { font-weight: 700; font-size: 0.85rem; color: var(--c-ink-soft); margin: 0 0 6px; }
+.toc ol { margin: 0; padding-left: 1.4em; }
+.toc li { margin: 0.25em 0; }
+.toc a { text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+/* ---------- パンくず ---------- */
+.breadcrumb { font-size: 0.78rem; color: var(--c-ink-soft); padding: 12px 0 0; }
+.breadcrumb a { color: inherit; }
+.breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; }
+.breadcrumb li + li::before { content: "›"; margin: 0 4px; }
+
+/* ---------- フッター ---------- */
+.site-footer {
+  margin-top: 56px; background: #f2f0ea; border-top: 1px solid var(--c-line);
+  padding: 32px 0 40px; font-size: 0.85rem; color: var(--c-ink-soft);
+}
+.footer-nav ul {
+  list-style: none; display: flex; flex-wrap: wrap; gap: 6px 18px;
+  margin: 0 0 14px; padding: 0;
+}
+.footer-nav a { color: var(--c-ink-soft); text-decoration: none; }
+.footer-nav a:hover { text-decoration: underline; }
+.footer-note { font-size: 0.78rem; }
+.copyright { margin-top: 10px; font-size: 0.78rem; }
+
+/* ---------- 印刷やアクセシビリティ ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* スマホ微調整 */
+@media (max-width: 560px) {
+  body { font-size: 15.5px; }
+  .hero { padding: 40px 0 28px; }
+  .section { padding: 30px 0; }
+  .card { padding: 16px; }
+  .quiz { padding: 18px 16px; }
+  .compare-table tbody th { min-width: 9em; }
+}
