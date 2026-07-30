@@ -91,13 +91,21 @@ a:hover { opacity: 0.85; }
   .header-inner { flex-wrap: wrap; }
 }
 
-/* ---------- PR表記バー ---------- */
+/* ---------- PR表記バー（旧・ヘッダー直下版。現在は未使用） ---------- */
 .pr-note {
   background: var(--c-note-bg); color: var(--c-note);
   font-size: 0.78rem; line-height: 1.6;
   padding: 6px 0;
 }
 .pr-note a { color: inherit; }
+
+/* ---------- PR表記（控えめ・商品リンクエリア近接版） ---------- */
+.pr-note-inline {
+  font-size: 0.78rem;
+  color: var(--c-ink-soft);
+  margin: 4px 0 20px;
+}
+.pr-note-inline a { color: inherit; }
 
 /* ---------- ヒーロー ---------- */
 .hero { padding: 56px 0 40px; }
