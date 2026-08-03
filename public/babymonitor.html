@@ -12,20 +12,30 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
-      <span class="brand-logo">こそだて比較ノート<span class="brand-dot">．</span></span>
-      <span class="brand-tag">（サイト名仮）</span>
+      <span class="brand-logo">こそだて比較ノート</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="global-nav">メニュー ☰</button>
     <nav class="global-nav" id="global-nav" aria-label="サイト内メニュー">
       <ul>
         <li><a href="index.html">ホーム</a></li>
-        <li><a href="sakunyuki.html">搾乳機の比較</a></li>
-        <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
-        <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
-        <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
-        <li><a href="about.html">運営方針</a></li>
-        <li><a href="ads-policy.html">広告について</a></li>
-        <li><a href="privacy.html">プライバシー</a></li>
+        <li class="nav-has-sub">
+          <button class="nav-sub-toggle" aria-expanded="false">比較カテゴリ <span class="nav-caret" aria-hidden="true">▾</span></button>
+          <ul class="nav-submenu">
+            <li><a href="sakunyuki.html">搾乳機の比較</a></li>
+            <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
+            <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
+            <li><a href="chiiku.html">知育用品の比較</a></li>
+            <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
+          </ul>
+        </li>
+        <li class="nav-has-sub">
+          <button class="nav-sub-toggle" aria-expanded="false">運営情報 <span class="nav-caret" aria-hidden="true">▾</span></button>
+          <ul class="nav-submenu">
+            <li><a href="about.html">運営方針</a></li>
+            <li><a href="ads-policy.html">広告について</a></li>
+            <li><a href="privacy.html">プライバシー</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </div>
@@ -60,13 +70,34 @@
         確認できなかった項目は<span class="chip-unverified">未確認</span>と表示しています。
       </p>
       <div class="note-box">
-        【このページの読み方】
-        当サイトでは掲載商品の使用レビューは行っていません。「使いやすい」「よく見える」「動作が快適」といった体験談ではなく、
-        公式仕様から確認できる事実と、そこから整理できる「どんな家庭の候補になり得るか」をお伝えします。
-        <span class="chip-unverified">未確認</span>…公式情報で確認できず／<span class="chip-recheck">要再確認</span>…情報源間で数値が異なるなど、公式情報の再確認を予定している項目
-      </div>
-      <div class="note-box">
         価格は調査時点の目安です。最新価格は各販売ページでご確認ください。
+      </div>
+
+      <div class="quick-guide" id="quick-guide">
+        <h2 class="quick-guide-heading">あなたに合いやすいタイプの目安</h2>
+        <p class="quick-guide-lead">詳しい説明を読む前に、近い条件を選んでみてください。あとから詳しい比較表・商品説明もご覧いただけます。</p>
+        <div class="quick-guide-grid">
+          <a class="card quick-guide-item" href="#p-kxhc705">
+            <span class="quick-guide-cond">Wi-Fi環境に依存したくない</span>
+            <span class="quick-guide-type">Wi-Fi不要・専用モニター型を見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-c10">
+            <span class="quick-guide-cond">外出先からもスマホで確認したい</span>
+            <span class="quick-guide-type">専用モニター＋スマホ両対応タイプを見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-ghsmca">
+            <span class="quick-guide-cond">まずは低予算で試したい</span>
+            <span class="quick-guide-type">月額無料の低価格タイプを見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-mimamoruplus">
+            <span class="quick-guide-cond">複数部屋をまとめて見守りたい</span>
+            <span class="quick-guide-type">複数カメラ対応タイプを見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-cuboai">
+            <span class="quick-guide-cond">AIによる詳細な見守り・記録を重視したい</span>
+            <span class="quick-guide-type">AI高機能タイプを見る →</span>
+          </a>
+        </div>
       </div>
 
       <nav class="toc" aria-label="目次">
@@ -74,7 +105,8 @@
         <ol>
           <li><a href="#types">ベビーモニターのタイプ</a></li>
           <li><a href="#howto">選び方の比較軸（5つの視点）</a></li>
-          <li><a href="#table">7商品の比較表</a></li>
+          <li><a href="#mini-compare">目的別の簡易比較</a></li>
+          <li><a href="#table">全商品の仕様を詳しく比較する</a></li>
           <li><a href="#products">商品ごとの特徴</a></li>
           <li><a href="#quiz">30秒タイプ診断</a></li>
           <li><a href="#faq">よくある質問</a></li>
@@ -155,9 +187,165 @@
     </div>
   </section>
 
+  <!-- 目的別の簡易比較 -->
+  <section class="section" id="mini-compare">
+    <h2 class="section-title">目的別の簡易比較</h2>
+    <p class="section-lead">
+      くわしい仕様表の前に、目的別の候補を3つまでにしぼって紹介します。候補の選定は、掲載しているメーカー公式仕様にもとづいています。
+      同じ商品が複数の目的に登場することもあります。
+    </p>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">低予算で選びたい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-ghsmca">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">グリーンハウス GH-SMCA-WH</span>
+            <span class="mini-compare-price">3,980円前後</span>
+          </div>
+          <span class="mini-compare-type">スマホアプリ型</span>
+          <p class="mini-compare-reason">公式に「月額の使用料もかかりません」と明記されており、初期費用を抑えやすい。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-mimamoruplus">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">SwitchBot 見守りカメラPlus 3MP</span>
+            <span class="mini-compare-price">3,980円</span>
+          </div>
+          <span class="mini-compare-type">スマホアプリ型</span>
+          <p class="mini-compare-reason">低価格ながら4分割の複数カメラ表示やAI自動追尾に公式対応。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-c230a">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">TP-Link Tapo C230/A</span>
+            <span class="mini-compare-price">6,120〜6,800円</span>
+          </div>
+          <span class="mini-compare-type">スマホアプリ型</span>
+          <p class="mini-compare-reason">3K画質やAI動体検知など機能を保ちながら価格を抑えやすい。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">Wi-Fiを使いたくない人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-kxhc705">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">パナソニック KX-HC705-W</span>
+            <span class="mini-compare-price">実勢15,000〜17,000円程度</span>
+          </div>
+          <span class="mini-compare-type">Wi-Fi不要・専用モニター型</span>
+          <p class="mini-compare-reason">DECT準拠の専用線方式で、ナイトビジョン・動体検知・室温検知などの機能を1台に集約。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-bmltl2">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">トリビュート BM-LTL2</span>
+            <span class="mini-compare-price">24,860円</span>
+          </div>
+          <span class="mini-compare-type">Wi-Fi不要・専用モニター型</span>
+          <p class="mini-compare-reason">2.4GHz FHSS専用線で、パン・チルト（水平約270°）や自動追尾に公式対応。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">外出先から確認したい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-c10">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">Eufy Baby Monitor C10</span>
+            <span class="mini-compare-price">15,340〜17,990円</span>
+          </div>
+          <span class="mini-compare-type">専用モニター＋スマホ両対応型</span>
+          <p class="mini-compare-reason">宅内は専用モニター、外出先はスマホアプリと使い分けられ、公式FAQで最大2台のカメラ追加に対応。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-c230a">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">TP-Link Tapo C230/A</span>
+            <span class="mini-compare-price">6,120〜6,800円</span>
+          </div>
+          <span class="mini-compare-type">スマホアプリ型</span>
+          <p class="mini-compare-reason">クラウドサービス「Tapo Care」（任意・月額400円〜）でも外出先から確認できる。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-mimamoruplus">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">SwitchBot 見守りカメラPlus 3MP</span>
+            <span class="mini-compare-price">3,980円</span>
+          </div>
+          <span class="mini-compare-type">スマホアプリ型</span>
+          <p class="mini-compare-reason">任意のクラウド保存（月額400円〜）で外出先からも確認しやすい。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">複数部屋・複数カメラで見守りたい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-c10">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">Eufy Baby Monitor C10</span>
+            <span class="mini-compare-price">15,340〜17,990円</span>
+          </div>
+          <span class="mini-compare-type">専用モニター＋スマホ両対応型</span>
+          <p class="mini-compare-reason">公式FAQで最大2台のカメラ追加に対応することを確認。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-mimamoruplus">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">SwitchBot 見守りカメラPlus 3MP</span>
+            <span class="mini-compare-price">3,980円</span>
+          </div>
+          <span class="mini-compare-type">スマホアプリ型</span>
+          <p class="mini-compare-reason">4分割表示で複数カメラを同時に確認できると公式に明記。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">AI機能・高機能を重視したい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-cuboai">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">CuboAi スマートベビーモニター</span>
+            <span class="mini-compare-price">45,800円</span>
+          </div>
+          <span class="mini-compare-type">スマホアプリ型（AI高機能）</span>
+          <p class="mini-compare-reason">顔覆われ検知・寝返り検知・咳検知など、AIによる見守り機能が公式に明記されている。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-c230a">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">TP-Link Tapo C230/A</span>
+            <span class="mini-compare-price">6,120〜6,800円</span>
+          </div>
+          <span class="mini-compare-type">スマホアプリ型</span>
+          <p class="mini-compare-reason">AI動体検知（人物・ペット・車両）に公式対応。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-mimamoruplus">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">SwitchBot 見守りカメラPlus 3MP</span>
+            <span class="mini-compare-price">3,980円</span>
+          </div>
+          <span class="mini-compare-type">スマホアプリ型</span>
+          <p class="mini-compare-reason">AI自動追尾に公式対応。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- 比較表 -->
   <section class="section" id="table">
-    <h2 class="section-title">7商品の比較表</h2>
+    <h2 class="section-title">全商品の仕様を詳しく比較する（7商品）</h2>
     <p class="section-lead">
       各商品の詳しい説明は<a href="#products">商品ごとの特徴</a>へ。
       <span class="chip-unverified">未確認</span>＝公式情報で確認できず、<span class="chip-recheck">要再確認</span>＝情報源間で数値が異なる等、公式資料での再確認を予定。
@@ -412,7 +600,7 @@
     <h2 class="section-title">商品ごとの特徴</h2>
     <p class="section-lead">
       並び順は「Wi-Fi不要・専用モニター型 → 専用モニター＋スマホ両対応型 → スマホアプリ型」のタイプ順です。順位ではありません。
-      各商品の「こんな家庭の候補に」は、公式仕様から整理した目安です。
+      各商品の「向いている人」「向いていない人」「購入前の注意点」は、公式仕様から整理した目安です。
     </p>
     <p class="pr-note-inline">※本ページには広告・PRリンクが含まれます。<a href="ads-policy.html">広告の方針</a></p>
 
@@ -434,14 +622,19 @@
         <li>ナイトビジョン・2倍ズーム・動体検知・室温検知</li>
         <li>録画機能：公式情報で確認できず（非搭載と推定）</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「宅内ネットワークやアプリ設定に頼らず見守りたい」「機能を一台に集約したい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>Wi-Fi環境やアプリ設定に頼らず見守りたい人、機能を一台に集約したい人。</p>
+        <p><strong>向いていない人：</strong>外出先からの確認や録画機能を重視したい人。</p>
+        <p><strong>購入前の注意点：</strong>録画機能についての記載は見当たらず、非搭載と推定されます。用途は宅内での見守りに限定される可能性があります。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所（Amazonアソシエイト） -->
         <span class="shoplink">Amazonで見る（準備中）</span>
         <!-- TODO: アフィリエイトリンク設置箇所（楽天アフィリエイト） -->
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://panasonic.jp/hns/products/KX-HC705.html -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563dcfb5.f80c30ab.563dcfb6.691f57ba/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fksdenki%2F4549980233351%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://panasonic.jp/hns/products/KX-HC705.html" target="_blank" rel="noopener">公式サイトで見る</a>
         <span class="shoplink-note">※ 購入リンクは準備中です。現在は各販売サイトで商品名を検索してください。</span>
       </div>
     </article>
@@ -463,13 +656,18 @@
         <li>パン・チルト（水平約270°・垂直約60°）・自動追尾</li>
         <li>画質・録画機能：公式情報で確認できず</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「専用モニターでカメラを遠隔操作しながら見守りたい」「Wi-Fiに依存したくない」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>専用モニターでカメラを遠隔操作しながら見守りたい人、Wi-Fiに依存したくない人。</p>
+        <p><strong>向いていない人：</strong>外出先から確認したい人、画質や録画機能を確認してから選びたい人。</p>
+        <p><strong>購入前の注意点：</strong>画質・録画機能は公式情報で確認できていません。購入前に公式サイトでご確認ください。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
         <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://mamasuma-jp.com/?pid=132968040 -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://mamasuma-jp.com/?pid=132968040" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -492,13 +690,18 @@
         <li>録画：microSD最大128GB／複数カメラ最大2台</li>
         <li>専用モニターバッテリー：充電式・最大12時間駆動</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「家では専用モニター、外出先ではスマホと使い分けたい」「月額課金なしで録画も残したい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>家では専用モニター、外出先ではスマホと使い分けたい人、複数カメラでの見守りを検討している人。</p>
+        <p><strong>向いていない人：</strong>クラウド保存や月額料金の有無を確認してから選びたい人。</p>
+        <p><strong>購入前の注意点：</strong>クラウド保存・月額料金についての明確な記載は見当たりません。外出先からのアプリ確認にはWi-Fi接続が必要です。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://www.ankerjapan.com/products/e6310 -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563de194.b8538685.563de195.699161d0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fanker%2Fe6310%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://www.ankerjapan.com/products/e6310" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -521,13 +724,18 @@
         <li>録画：microSD最大256GB／クラウド利用の明確な記載なし</li>
         <li>月額料金：無料（公式明記）</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「月額費用をかけたくない」「まずは低価格で試したい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>月額費用をかけたくない人、まずは低価格で試したい人。</p>
+        <p><strong>向いていない人：</strong>泣き声検知や室温検知の対応を確認してから選びたい人。</p>
+        <p><strong>購入前の注意点：</strong>泣き声検知・室温検知についての記載は確認できませんでした。公式サイトと公式直営店で型番表記（GH-SMCA-WH／GH-SMCA-WHM）が分かれている点にもご注意ください。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://www.green-house.co.jp/products/gh-smca/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563de3b2.ca37bba2.563de3b3.a5b9105a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fjcom316-cute%2Fgh-smca-wh%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://www.green-house.co.jp/products/gh-smca/" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -549,13 +757,18 @@
         <li>録画：microSD（8〜256GB）／クラウド（任意・月額400円〜）</li>
         <li>複数カメラ：4分割同時表示に対応</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「複数部屋をまとめて見守りたい」「見守りと防犯を兼ねたい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>複数部屋をまとめて見守りたい人、見守りと防犯を兼ねたい人。</p>
+        <p><strong>向いていない人：</strong>泣き声検知の対応を確認してから選びたい人。</p>
+        <p><strong>購入前の注意点：</strong>泣き声検知機能についての公式な記載は確認できませんでした。録画をクラウド保存する場合は月額400円〜の任意課金が必要です。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://www.switchbot.jp/products/switchbot-pan-tilt-cam-plus-3mp -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563de9e8.70054f3d.563de9e9.ad645b6b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fswitchbot%2F1000010914%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjEwMHgxMDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://www.switchbot.jp/products/switchbot-pan-tilt-cam-plus-3mp" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -577,13 +790,18 @@
         <li>録画：microSD最大512GB／クラウド（任意・Tapo Care月額400円〜）</li>
         <li>セキュリティ：AES128bit＋SSL/TLS・2段階認証</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「外出先確認とクラウド録画を両方重視したい」「セキュリティ仕様の公式開示を重視したい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>外出先確認とクラウド録画を両方重視したい人、セキュリティ仕様の公式開示を重視したい人。</p>
+        <p><strong>向いていない人：</strong>パン・チルトの可動域を正確な数値で確認してから選びたい人。</p>
+        <p><strong>購入前の注意点：</strong>パン・チルトの可動域は日本語公式プレスリリースと海外公式ページで数値表現が異なっており、要再確認です。クラウド録画は月額400円〜の任意課金です。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://www.tp-link.com/jp/press/news/21488/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563df100.a820ccb4.563df101.8bafc2cc/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftplinkdirect%2F8885021371696%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://www.tp-link.com/jp/smart-home/tapo/tapo-c230/" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -606,13 +824,18 @@
         <li>クラウド中心（ローカル保存の明記なし）</li>
         <li>基本機能は無料、AI拡張機能は月額課金制（要再確認）</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「AIによる詳細な見守り・記録・分析を重視したい」「月額課金があっても高機能を求めたい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>AIによる詳細な見守り・記録・分析を重視したい人、月額課金があっても高機能を求めたい人。</p>
+        <p><strong>向いていない人：</strong>今回の掲載商品の中で価格を抑えたい人、ローカル保存を重視したい人。</p>
+        <p><strong>購入前の注意点：</strong>顔覆われ・寝返り検知などの拡張機能は月額課金制「CuboAi Care」（プレミアム月額600円〜）が必要です。料金は公式サイトと正規販売店とで表記に差異があり、要再確認です。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://jp.getcubo.com/products/cuboai-smart-baby-monitor -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563df4d4.d2694f93.563df4d5.f3bf89f6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fjustrich%2Fcubo-ai-plus%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://jp.getcubo.com/products/cuboai-smart-baby-monitor" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -720,6 +943,7 @@
         <li><a href="sakunyuki.html">搾乳機の比較</a></li>
         <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
         <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
+        <li><a href="chiiku.html">知育用品の比較</a></li>
         <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
         <li><a href="about.html">運営方針・編集ポリシー</a></li>
         <li><a href="ads-policy.html">アフィリエイト広告について</a></li>

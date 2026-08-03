@@ -58,20 +58,23 @@ a:hover { opacity: 0.85; }
   display: flex; align-items: center; justify-content: space-between;
   gap: 12px; min-height: 60px;
 }
-.brand { display: flex; align-items: baseline; gap: 8px; text-decoration: none; }
+.brand {
+  display: flex; align-items: baseline; gap: 8px; text-decoration: none;
+  flex-shrink: 0;
+}
 .brand-logo {
   font-weight: 700; font-size: 1.15rem; color: var(--c-primary-deep);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em; white-space: nowrap;
 }
 .brand-logo .brand-dot { color: var(--c-accent); }
-.brand-tag { font-size: 0.7rem; color: var(--c-ink-soft); }
 
-.global-nav ul {
+.global-nav > ul {
   display: flex; gap: 4px; list-style: none; margin: 0; padding: 0;
 }
 .global-nav a {
   display: block; padding: 8px 12px; border-radius: var(--radius-s);
   text-decoration: none; font-size: 0.9rem; color: var(--c-ink);
+  white-space: nowrap;
 }
 .global-nav a:hover, .global-nav a[aria-current="page"] {
   background: var(--c-primary-pale); color: var(--c-primary-deep); opacity: 1;
@@ -83,12 +86,47 @@ a:hover { opacity: 0.85; }
   color: var(--c-ink); cursor: pointer;
 }
 
+/* ---------- ヘッダーのドロップダウン（比較カテゴリ／運営情報） ---------- */
+.nav-has-sub { position: relative; }
+.nav-sub-toggle {
+  display: flex; align-items: center; gap: 4px;
+  padding: 8px 12px; border-radius: var(--radius-s);
+  background: none; border: none; font: inherit; font-size: 0.9rem;
+  color: var(--c-ink); cursor: pointer; white-space: nowrap;
+}
+.nav-sub-toggle:hover, .nav-has-sub.is-open .nav-sub-toggle {
+  background: var(--c-primary-pale); color: var(--c-primary-deep);
+}
+.nav-caret { font-size: 0.65rem; transition: transform 0.15s ease; }
+.nav-has-sub.is-open .nav-caret { transform: rotate(180deg); }
+
+.nav-submenu {
+  list-style: none; margin: 0; padding: 6px; display: none;
+  position: absolute; top: calc(100% + 4px); left: 0; min-width: 210px;
+  background: var(--c-surface); border: 1px solid var(--c-line);
+  border-radius: var(--radius-s); box-shadow: var(--shadow); z-index: 60;
+}
+.nav-has-sub.is-open .nav-submenu { display: block; }
+.nav-submenu a {
+  display: block; padding: 8px 10px; border-radius: var(--radius-s);
+  font-size: 0.88rem; white-space: nowrap;
+}
+.nav-submenu a:hover, .nav-submenu a[aria-current="page"] {
+  background: var(--c-primary-pale); color: var(--c-primary-deep); opacity: 1;
+}
+
 @media (max-width: 760px) {
   .nav-toggle { display: inline-block; }
   .global-nav { display: none; width: 100%; }
   .global-nav.is-open { display: block; padding-bottom: 10px; }
-  .global-nav ul { flex-direction: column; }
+  .global-nav > ul { flex-direction: column; }
   .header-inner { flex-wrap: wrap; }
+
+  .nav-submenu {
+    position: static; box-shadow: none; border: none;
+    padding: 0 0 4px 14px; min-width: 0;
+  }
+  .nav-submenu a { white-space: normal; }
 }
 
 /* ---------- PR表記バー（旧・ヘッダー直下版。現在は未使用） ---------- */
@@ -187,6 +225,17 @@ h4 { font-size: 1rem; margin: 1.4em 0 0.4em; }
   padding: 14px 16px; font-size: 0.9rem; margin: 18px 0;
 }
 
+/* ---------- 医療機器ページ用の注意書き（目立たせる） ---------- */
+.medical-notice {
+  background: #fdeeec; border: 2px solid #d98274; border-radius: var(--radius-s);
+  padding: 16px 18px; font-size: 0.92rem; line-height: 1.85;
+  color: #8a3b2e; margin: 18px 0;
+}
+.medical-notice strong { color: #8a3b2e; }
+.medical-notice p { margin: 0.5em 0; }
+.medical-notice p:first-child { margin-top: 0; }
+.medical-notice p:last-child { margin-bottom: 0; }
+
 /* ---------- タイプ解説 ---------- */
 .type-grid {
   display: grid; gap: 14px;
@@ -256,6 +305,48 @@ h4 { font-size: 1rem; margin: 1.4em 0 0.4em; }
   padding: 10px 14px; font-size: 0.87rem; margin-top: 10px;
 }
 .fit-box strong { color: var(--c-primary-deep); }
+.fit-box p { margin: 4px 0; }
+.fit-box p:first-child { margin-top: 0; }
+.fit-box p:last-child { margin-bottom: 0; }
+
+/* ---------- 使い方から候補を絞る（簡易ガイド） ---------- */
+.quick-guide { margin: 18px 0 4px; }
+.quick-guide-heading { font-size: 1.05rem; color: var(--c-primary-deep); margin: 0 0 4px; }
+.quick-guide-lead { color: var(--c-ink-soft); font-size: 0.88rem; margin: 0 0 12px; }
+.quick-guide-grid {
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+.quick-guide-item {
+  display: flex; flex-direction: column; gap: 6px;
+  text-decoration: none; padding: 14px 16px;
+  transition: border-color 0.15s ease, transform 0.06s ease;
+}
+.quick-guide-item:hover { border-color: var(--c-primary); }
+.quick-guide-item:active { transform: scale(0.99); }
+.quick-guide-cond { font-size: 0.78rem; color: var(--c-ink-soft); }
+.quick-guide-type { font-size: 0.98rem; font-weight: 700; color: var(--c-primary-deep); }
+
+/* ---------- 目的別の簡易比較（スマホ向け小型ブロック） ---------- */
+.mini-compare-group { margin: 20px 0; }
+.mini-compare-heading { font-size: 0.96rem; color: var(--c-primary-deep); margin: 0 0 10px; }
+.mini-compare-cards {
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+.mini-compare-card {
+  display: flex; flex-direction: column; gap: 6px;
+  text-decoration: none; padding: 14px 16px;
+  transition: border-color 0.15s ease, transform 0.06s ease;
+}
+.mini-compare-card:hover { border-color: var(--c-primary); }
+.mini-compare-card:active { transform: scale(0.99); }
+.mini-compare-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.mini-compare-name { font-size: 0.88rem; font-weight: 700; color: var(--c-ink); }
+.mini-compare-price { font-size: 0.85rem; font-weight: 700; color: var(--c-primary-deep); white-space: nowrap; }
+.mini-compare-type { font-size: 0.74rem; color: var(--c-ink-soft); }
+.mini-compare-reason { font-size: 0.82rem; margin: 0; color: var(--c-ink); }
+.mini-compare-link { font-size: 0.78rem; color: var(--c-primary-deep); font-weight: 600; margin-top: auto; }
 
 /* 購入リンク仮置き */
 .shoplinks {
@@ -269,6 +360,12 @@ h4 { font-size: 1rem; margin: 1.4em 0 0.4em; }
   cursor: default;
 }
 .shoplink-note { font-size: 0.75rem; color: var(--c-ink-soft); }
+.shoplink.is-live {
+  border-style: solid; border-color: var(--c-primary);
+  color: var(--c-primary-deep); background: var(--c-primary-pale);
+  cursor: pointer;
+}
+.shoplink.is-live:hover { opacity: 0.85; }
 
 /* ---------- 診断 ---------- */
 .quiz {

@@ -12,20 +12,30 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
-      <span class="brand-logo">こそだて比較ノート<span class="brand-dot">．</span></span>
-      <span class="brand-tag">（サイト名仮）</span>
+      <span class="brand-logo">こそだて比較ノート</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="global-nav">メニュー ☰</button>
     <nav class="global-nav" id="global-nav" aria-label="サイト内メニュー">
       <ul>
         <li><a href="index.html">ホーム</a></li>
-        <li><a href="sakunyuki.html">搾乳機の比較</a></li>
-        <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
-        <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
-        <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
-        <li><a href="about.html">運営方針</a></li>
-        <li><a href="ads-policy.html">広告について</a></li>
-        <li><a href="privacy.html">プライバシー</a></li>
+        <li class="nav-has-sub">
+          <button class="nav-sub-toggle" aria-expanded="false">比較カテゴリ <span class="nav-caret" aria-hidden="true">▾</span></button>
+          <ul class="nav-submenu">
+            <li><a href="sakunyuki.html">搾乳機の比較</a></li>
+            <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
+            <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
+            <li><a href="chiiku.html">知育用品の比較</a></li>
+            <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
+          </ul>
+        </li>
+        <li class="nav-has-sub">
+          <button class="nav-sub-toggle" aria-expanded="false">運営情報 <span class="nav-caret" aria-hidden="true">▾</span></button>
+          <ul class="nav-submenu">
+            <li><a href="about.html">運営方針</a></li>
+            <li><a href="ads-policy.html">広告について</a></li>
+            <li><a href="privacy.html">プライバシー</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </div>
@@ -60,13 +70,30 @@
         確認できなかった項目は<span class="chip-unverified">未確認</span>と表示しています。
       </p>
       <div class="note-box">
-        【このページの読み方】
-        当サイトでは掲載商品の使用レビューは行っていません。「使いやすい」「なめらかになる」「音が静か」といった体験談ではなく、
-        公式仕様から確認できる事実と、そこから整理できる「どんな家庭の候補になり得るか」をお伝えします。
-        <span class="chip-unverified">未確認</span>…公式情報で確認できず／<span class="chip-recheck">要再確認</span>…公式情報の再確認を予定している項目
-      </div>
-      <div class="note-box">
         価格は調査時点の目安です。最新価格は各販売ページでご確認ください。
+      </div>
+
+      <div class="quick-guide" id="quick-guide">
+        <h2 class="quick-guide-heading">まずは使い方から候補を絞る</h2>
+        <p class="quick-guide-lead">詳しい説明を読む前に、近い条件を選んでみてください。あとから詳しい比較表・商品説明もご覧いただけます。</p>
+        <div class="quick-guide-grid">
+          <a class="card quick-guide-item" href="#p-hb65h8jp">
+            <span class="quick-guide-cond">離乳食作りがメイン</span>
+            <span class="quick-guide-type">離乳食専用に近いタイプを見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-ihb-m301">
+            <span class="quick-guide-cond">離乳食後も普段の料理に長く使いたい</span>
+            <span class="quick-guide-type">多機能セットを見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-rhb-2">
+            <span class="quick-guide-cond">コンセントの位置を気にしたくない</span>
+            <span class="quick-guide-type">コードレスタイプを見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-rhb-3">
+            <span class="quick-guide-cond">まず低予算で1台試したい</span>
+            <span class="quick-guide-type">価格を抑えたモデルを見る →</span>
+          </a>
+        </div>
       </div>
 
       <nav class="toc" aria-label="目次">
@@ -74,7 +101,8 @@
         <ol>
           <li><a href="#types">離乳食ブレンダーのタイプ</a></li>
           <li><a href="#howto">選び方の比較軸（5つの視点）</a></li>
-          <li><a href="#table">8商品の比較表</a></li>
+          <li><a href="#mini-compare">目的別の簡易比較</a></li>
+          <li><a href="#table">全商品の仕様を詳しく比較する</a></li>
           <li><a href="#products">商品ごとの特徴</a></li>
           <li><a href="#quiz">30秒タイプ診断</a></li>
           <li><a href="#faq">よくある質問</a></li>
@@ -93,7 +121,7 @@
       <div class="card type-card">
         <h3>多機能セット（コード式）</h3>
         <p>ブレンダー・チョッパー・泡立て器など複数のアタッチメントが付属し、コンセントに挿して使うタイプ。離乳食だけでなく普段の料理にも使える汎用性が特徴で、価格帯も比較的幅広く存在します。</p>
-        <span class="type-meta">価格帯の目安：7,700円〜13,800円（今回の掲載商品）</span>
+        <span class="type-meta">価格帯の目安：7,700円〜9,680円（今回の掲載商品）</span>
       </div>
       <div class="card type-card">
         <h3>離乳食専用に近いタイプ（コード式）</h3>
@@ -150,15 +178,171 @@
 
       <div class="info-box">
         <strong>予算の目安（2026年7月時点・公式税込価格）</strong><br>
-        多機能セット：7,700円〜13,800円／離乳食専用に近いタイプ：9,350円〜15,180円／コードレス：8,800円〜17,050円。
+        多機能セット：7,700円〜9,680円／離乳食専用に近いタイプ：9,350円〜15,180円／コードレス：8,800円〜17,050円。
         価格は調査時点の目安です。最新価格は各販売ページでご確認ください。
+      </div>
+    </div>
+  </section>
+
+  <!-- 目的別の簡易比較 -->
+  <section class="section" id="mini-compare">
+    <h2 class="section-title">目的別の簡易比較</h2>
+    <p class="section-lead">
+      くわしい仕様表の前に、目的別の候補を3つまでにしぼって紹介します。候補の選定は、掲載しているメーカー公式仕様にもとづいています。
+      同じ商品が複数の目的に登場することもあります。
+    </p>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">低予算で選びたい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-rhb-3">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">レコルト RHB-3</span>
+            <span class="mini-compare-price">7,700円</span>
+          </div>
+          <span class="mini-compare-type">多機能セット</span>
+          <p class="mini-compare-reason">今回の掲載商品の中で最も価格を抑えられ、アタッチメントごとの重量表示もあり選びやすい。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-vhb-30">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">ビタントニオ VHB-30</span>
+            <span class="mini-compare-price">8,690円</span>
+          </div>
+          <span class="mini-compare-type">多機能セット</span>
+          <p class="mini-compare-reason">8段階速度調整を公式に明記しつつ、価格帯は比較的抑えめ。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-ihb-m301">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">アイリスオーヤマ IHB-M301</span>
+            <span class="mini-compare-price">8,980円</span>
+          </div>
+          <span class="mini-compare-type">多機能セット</span>
+          <p class="mini-compare-reason">1台4役で、スムージーやスープなど普段使いへの訴求もある構成。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">離乳食作りをメインにしたい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-hb65h8jp">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">ティファール ベビーマルチ</span>
+            <span class="mini-compare-price">15,180円</span>
+          </div>
+          <span class="mini-compare-type">離乳食専用に近い</span>
+          <p class="mini-compare-reason">離乳食用ブレンダー・カップ・専用レシピブックが付属し、離乳食初期の少量調理への対応も明記。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-boe142">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">BRUNO BOE142</span>
+            <span class="mini-compare-price">9,350円</span>
+          </div>
+          <span class="mini-compare-type">離乳食専用に近い</span>
+          <p class="mini-compare-reason">ベビーブレード・ベビーカップを追加した構成で、少量攪拌への対応が公式に説明されている。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-vhb-30">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">ビタントニオ VHB-30</span>
+            <span class="mini-compare-price">8,690円</span>
+          </div>
+          <span class="mini-compare-type">多機能セット</span>
+          <p class="mini-compare-reason">「赤ちゃんに合わせた」8段階調整と、少量調理向けのシャフト改良が公式に説明されている。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">普段の料理にも使いたい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-mxs302">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">パナソニック MX-S302</span>
+            <span class="mini-compare-price">オープン価格</span>
+          </div>
+          <span class="mini-compare-type">多機能セット</span>
+          <p class="mini-compare-reason">加熱後の鍋やボウルで直接使用できると公式に明記されており、普段の調理導線に組み込みやすい。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-mq50001m">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">ブラウン MQ50001M</span>
+            <span class="mini-compare-price">9,680円</span>
+          </div>
+          <span class="mini-compare-type">多機能セット</span>
+          <p class="mini-compare-reason">21段階の速度調整と400Wの出力で、離乳食後も細かい調理に対応しやすい。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-ihb-m301">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">アイリスオーヤマ IHB-M301</span>
+            <span class="mini-compare-price">8,980円</span>
+          </div>
+          <span class="mini-compare-type">多機能セット</span>
+          <p class="mini-compare-reason">スムージーやスープなど、離乳食後の普段使いへの訴求が公式ページに明記されている。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">コードレスを選びたい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-rhb-2">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">レコルト RHB-2</span>
+            <span class="mini-compare-price">8,800円</span>
+          </div>
+          <span class="mini-compare-type">少量調理向け（コードレス）</span>
+          <p class="mini-compare-reason">今回の掲載商品で唯一のコードレス（USB充電式）。連続使用2分・合計2分で30分休止が公式に明記されています。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">お手入れの負担を減らしたい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-rhb-3">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">レコルト RHB-3</span>
+            <span class="mini-compare-price">7,700円</span>
+          </div>
+          <span class="mini-compare-type">多機能セット</span>
+          <p class="mini-compare-reason">カップ・すべり止めマット/フタ・スパチュラ・ホイッパーが食洗機対応と公式に明記。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-boe142">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">BRUNO BOE142</span>
+            <span class="mini-compare-price">9,350円</span>
+          </div>
+          <span class="mini-compare-type">離乳食専用に近い</span>
+          <p class="mini-compare-reason">チョッパーボトルやブレンダーカップなど一部パーツが電子レンジ・食洗機の両方に対応。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-mq50001m">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">ブラウン MQ50001M</span>
+            <span class="mini-compare-price">9,680円</span>
+          </div>
+          <span class="mini-compare-type">多機能セット</span>
+          <p class="mini-compare-reason">本体を除く多くのパーツが食洗機対応と公式に明記されている。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- 比較表 -->
   <section class="section" id="table">
-    <h2 class="section-title">8商品の比較表</h2>
+    <h2 class="section-title">全商品の仕様を詳しく比較する（8商品）</h2>
     <p class="section-lead">
       各商品の詳しい説明は<a href="#products">商品ごとの特徴</a>へ。
       <span class="chip-unverified">未確認</span>＝公式情報で確認できず、<span class="chip-recheck">要再確認</span>＝公式資料での再確認を予定。
@@ -192,7 +376,7 @@
           </tr>
           <tr>
             <th class="row-label">価格目安（税込）</th>
-            <td>8,980円</td><td>8,690円</td><td>7,700円</td><td>13,800円</td>
+            <td>8,980円</td><td>8,690円</td><td>7,700円</td><td>9,680円</td>
             <td>15,180円</td><td>9,350円</td><td>オープン価格</td><td>8,800円</td>
           </tr>
           <tr>
@@ -330,7 +514,7 @@
     <h2 class="section-title">商品ごとの特徴</h2>
     <p class="section-lead">
       並び順は「多機能セット → 離乳食専用に近いタイプ → コードレス」のタイプ順・価格順です。順位ではありません。
-      各商品の「こんな家庭の候補に」は、公式仕様から整理した目安です。
+      各商品の「向いている人」「向いていない人」「購入前の注意点」は、公式仕様から整理した目安です。
     </p>
     <p class="pr-note-inline">※本ページには広告・PRリンクが含まれます。<a href="ads-policy.html">広告の方針</a></p>
 
@@ -352,14 +536,19 @@
         <li>コード式（約1.5m）</li>
         <li>食洗機対応：公式情報で確認できず</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「価格を抑えたい」「1台でつぶす・混ぜる・刻むを済ませたい」を重視する家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>価格を抑えたい人、1台でつぶす・混ぜる・刻む・泡立てるを済ませたい人。</p>
+        <p><strong>向いていない人：</strong>速度調整の段階数を確認してから選びたい人、食洗機対応の有無を重視する人。</p>
+        <p><strong>購入前の注意点：</strong>速度調整の段階数と食洗機対応の可否は公式情報で確認できていません。購入前に公式サイトでご確認ください。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所（Amazonアソシエイト） -->
         <span class="shoplink">Amazonで見る（準備中）</span>
         <!-- TODO: アフィリエイトリンク設置箇所（楽天アフィリエイト） -->
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://www.irisplaza.co.jp/index.php?KB=SHOSAI&SID=106192F -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563da89c.870eaf71.563da89d.e51639c8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Firisplaza-r%2F106192%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://www.irisplaza.co.jp/index.php?KB=SHOSAI&SID=106192F" target="_blank" rel="noopener">公式サイトで見る</a>
         <span class="shoplink-note">※ 購入リンクは準備中です。現在は各販売サイトで商品名を検索してください。</span>
       </div>
     </article>
@@ -381,13 +570,18 @@
         <li>8段階の速度調整</li>
         <li>コード式（約1.7m）／熱湯消毒対応</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「少量調理の細かい調整をしたい」「スリムな本体で収納したい」を重視する家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>少量調理の細かい調整をしたい人、スリムな本体で収納したい人、熱湯消毒をしたい人。</p>
+        <p><strong>向いていない人：</strong>コード長を短めにしたい人（約1.7mとやや長め）。</p>
+        <p><strong>購入前の注意点：</strong>食洗機対応の可否は公式情報で確認できていません。購入前に公式サイトでご確認ください。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://vitantonio.jp/products/vhb-30 -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563dad9a.935dd50e.563dad9b.21dbfa7a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fr-kojima%2F4968291315387%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://vitantonio.jp/products/vhb-30" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -408,13 +602,18 @@
         <li>コード式／専用レシピブック付属</li>
         <li>食洗機対応：カップ・すべり止めマット/フタ・スパチュラ・ホイッパー</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「価格を抑えたい」「軽さやパーツ構成の分かりやすさを重視したい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>価格を抑えたい人、パーツごとの重量表示で軽さを比較して選びたい人。</p>
+        <p><strong>向いていない人：</strong>速度調整の段階数を確認してから選びたい人。</p>
+        <p><strong>購入前の注意点：</strong>速度調整の段階数は公式情報で確認できていません。食洗機対応はカップ・すべり止めマット/フタ・スパチュラ・ホイッパーのみで、本体は対象外です。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://recolte-jp.com/products/rhb-3/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563db1ae.7d24ace7.563db1af.ff5bc0e5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Froomy%2Fwin16aug25e01%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://recolte-jp.com/products/rhb-3/" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -422,7 +621,8 @@
       <div class="product-head">
         <h3>ブラウン マルチクイック5 ハンドブレンダー MQ50001M</h3>
         <span class="product-maker">Braun（ブラウン／De'Longhi）</span>
-        <span class="product-price">価格目安 13,800円<small>（公式）</small></span>
+        <span class="product-price">価格目安 9,680円<small>（公式・税込・2026年7月31日時点）</small></span>
+        <span class="shoplink-note">※価格は変更される場合があります。最新価格は公式サイトでご確認ください。</span>
       </div>
       <p style="font-size:0.9rem;">
         海外の調理家電メーカー・ブラウンのハンドブレンダー。商品説明では「少量調理に最適」と明記され、
@@ -435,13 +635,18 @@
         <li>21段階の速度調整・400W</li>
         <li>コード式（約1.2m）</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「少量調理の細かい調整をしたい」「海外の調理家電メーカーの製品を使いたい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>少量調理の細かい調整をしたい人（21段階）、400Wのパワーを求める人。</p>
+        <p><strong>向いていない人：</strong>今回の掲載商品の中でより価格を抑えたい人。</p>
+        <p><strong>購入前の注意点：</strong>食洗機対応の可否は公式情報で確認できていません。購入前に公式サイトでご確認ください。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://item.rakuten.co.jp/braunhousehold/0x22111564/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563db777.85521c0b.563db778.f45cb735/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpursell2025%2F3509-005449%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://www.braunhousehold.com/ja-jp/p/maruchikuitsuku-5-maruchikuitsuku-5-handoburenda-mq50001m/MQ50001M.html?pid=0X22111564" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -464,13 +669,18 @@
         <li>コード式（約1.4m）</li>
         <li>食洗機対応：本体・チョッパー蓋・ウィスクアダプター以外</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「離乳食作りをメインに使いたい」「レシピ付きで迷わず使い始めたい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>離乳食作りをメインに使いたい人、専用レシピブック付きで迷わず使い始めたい人、離乳食初期の少量調理から使いたい人。</p>
+        <p><strong>向いていない人：</strong>今回の掲載商品の中で価格を抑えたい人。</p>
+        <p><strong>購入前の注意点：</strong>食洗機対応は本体・チョッパー蓋・ウィスクアダプター以外の範囲です。対応パーツは購入前に取扱説明書等でご確認ください。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://www.t-fal.co.jp/cooking-appliances/handblenders/products/handblenderbaby-multi-7211003757/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563dbf02.a56f6738.563dbf03.e9f27f5e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fedion%2F3016661156717%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://www.t-fal.co.jp/cooking-appliances/handblenders/products/handblenderbaby-multi-7211003757/" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -492,13 +702,18 @@
         <li>コード式（約1.5m）</li>
         <li>一部パーツが電子レンジ・食洗機の両方に対応</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「電子レンジ対応パーツで手間を減らしたい」「離乳食作りにパーツを寄せたい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>電子レンジ対応パーツで手間を減らしたい人、離乳食作りにパーツを寄せたい人。</p>
+        <p><strong>向いていない人：</strong>速度調整の細かさを重視する人（2段階）。</p>
+        <p><strong>購入前の注意点：</strong>電子レンジ・食洗機の両方に対応するのは一部パーツのみです。対応範囲は購入前にご確認ください。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://store.shopping.yahoo.co.jp/bruno-official/7761148.html -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563dc19b.0a52bfc1.563dc19c.92903497/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbruno-official%2F7761148%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://bruno-inc.com/?pg=product_detail&am=07761148" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -519,13 +734,18 @@
         <li>ダイヤル式速度調整（段階数は要再確認）</li>
         <li>食洗機対応：ブレンダー・カップ・チョッパー一部・泡立て器ワイヤー部</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「加熱調理と離乳食作りの動線を一体化したい」「国内メーカーのサポート体制を重視したい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>加熱後の鍋やボウルで直接使いたい人、国内メーカーの製品を使いたい人。</p>
+        <p><strong>向いていない人：</strong>購入前に本体重量・サイズ・コード長を確認してから選びたい人。</p>
+        <p><strong>購入前の注意点：</strong>本体重量・サイズ・コード長・速度調整の段階数は公式ページ上で確認できませんでした。購入前に公式サイトでご確認ください。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://panasonic.jp/blender/products/MX-S302.html -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563dc7bf.954a21e0.563dc7c0.e652d3eb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdenkichiweb%2F4549980603871%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://panasonic.jp/blender/products/MX-S302.html" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -548,13 +768,18 @@
         <li>連続使用2分・合計2分で要休止（公式明記）</li>
         <li>専用レシピブック付属</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「コンセントの位置を気にしたくない」「少量ずつこまめに調理するスタイルに合う」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>コンセントの位置を気にしたくない人、少量ずつこまめに調理するスタイルに合う人。</p>
+        <p><strong>向いていない人：</strong>まとめて大量に調理したい人、連続使用時間の制約を避けたい人。</p>
+        <p><strong>購入前の注意点：</strong>連続使用2分、または合計2分間動作させた場合は30分以上休ませる必要があると公式に明記されています。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://recolte-jp.com/products/cordless-handy-blender/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/563dcd0f.a3076527.563dcd10.9f4ed6b1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fimportshopaqua%2F100000841%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://recolte-jp.com/products/cordless-handy-blender/" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -660,6 +885,7 @@
         <li><a href="sakunyuki.html">搾乳機の比較</a></li>
         <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
         <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
+        <li><a href="chiiku.html">知育用品の比較</a></li>
         <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
         <li><a href="about.html">運営方針・編集ポリシー</a></li>
         <li><a href="ads-policy.html">アフィリエイト広告について</a></li>

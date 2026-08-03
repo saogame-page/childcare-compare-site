@@ -12,20 +12,30 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
-      <span class="brand-logo">こそだて比較ノート<span class="brand-dot">．</span></span>
-      <span class="brand-tag">（サイト名仮）</span>
+      <span class="brand-logo">こそだて比較ノート</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="global-nav">メニュー ☰</button>
     <nav class="global-nav" id="global-nav" aria-label="サイト内メニュー">
       <ul>
         <li><a href="index.html">ホーム</a></li>
-        <li><a href="sakunyuki.html">搾乳機の比較</a></li>
-        <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
-        <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
-        <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
-        <li><a href="about.html">運営方針</a></li>
-        <li><a href="ads-policy.html">広告について</a></li>
-        <li><a href="privacy.html">プライバシー</a></li>
+        <li class="nav-has-sub">
+          <button class="nav-sub-toggle" aria-expanded="false">比較カテゴリ <span class="nav-caret" aria-hidden="true">▾</span></button>
+          <ul class="nav-submenu">
+            <li><a href="sakunyuki.html">搾乳機の比較</a></li>
+            <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
+            <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
+            <li><a href="chiiku.html">知育用品の比較</a></li>
+            <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
+          </ul>
+        </li>
+        <li class="nav-has-sub">
+          <button class="nav-sub-toggle" aria-expanded="false">運営情報 <span class="nav-caret" aria-hidden="true">▾</span></button>
+          <ul class="nav-submenu">
+            <li><a href="about.html">運営方針</a></li>
+            <li><a href="ads-policy.html">広告について</a></li>
+            <li><a href="privacy.html">プライバシー</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </div>
@@ -60,12 +70,6 @@
         仕様はすべてメーカー公式サイトで確認し、確認できなかった項目は<span class="chip-unverified">要確認</span>と表示しています。
       </p>
       <div class="note-box">
-        【このページの読み方】
-        当サイトでは掲載車種の試乗・使用レビューは行っていません。「乗り心地が良い」「安定して走れる」といった体験談ではなく、
-        公式仕様から確認できる事実と、そこから整理できる「どんな家庭の候補になり得るか」をお伝えします。
-        <span class="chip-unverified">要確認</span>…公式情報で確認できず、推測せずそのまま「要確認」としている項目／<span class="chip-recheck">要再確認</span>…情報源間で表記が食い違う等、公式資料での再確認を予定している項目
-      </div>
-      <div class="note-box">
         価格は調査時点の目安です。最新価格は各販売ページでご確認ください。商品写真については、無断転載を避けるため現時点では掲載していません。今後、正規のアフィリエイトプログラム経由で提供される商品画像を追加する予定です。
       </div>
       <div class="info-box">
@@ -73,12 +77,40 @@
         保護者1名が幼児2名（前1名・後ろ1名）を同時に乗せて走行できる基準を満たした自転車のことです。この基準に適合していない自転車で幼児を2人同乗させることは法令違反となる場合があるため、2人同乗を検討する場合は必ず適合車かどうかを確認してください。今回の掲載6車種はいずれも公式に適合車として案内されていますが、詳細は各都道府県の道路交通規則や販売店にもご確認ください。
       </div>
 
+      <div class="quick-guide" id="quick-guide">
+        <h2 class="quick-guide-heading">あなたに合いやすいタイプの目安</h2>
+        <p class="quick-guide-lead">詳しい説明を読む前に、近い条件を選んでみてください。あとから詳しい比較表・車種説明もご覧いただけます。</p>
+        <div class="quick-guide-grid">
+          <a class="card quick-guide-item" href="#p-annysdx">
+            <span class="quick-guide-cond">2人同乗を前提に長く使いたい</span>
+            <span class="quick-guide-type">後ろ乗せ標準タイプを見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-polare">
+            <span class="quick-guide-cond">自転車に不慣れ・小柄で足つきを重視したい</span>
+            <span class="quick-guide-type">前乗せ標準タイプを見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-mobdd">
+            <span class="quick-guide-cond">坂道や長距離の送り迎えが多い</span>
+            <span class="quick-guide-type">走行性能重視タイプを見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-pasbabby">
+            <span class="quick-guide-cond">夫婦で共用しやすいコンパクトな後ろ乗せモデルがほしい</span>
+            <span class="quick-guide-type">夫婦共用向けモデルを見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-croomrdx">
+            <span class="quick-guide-cond">空気圧チェック等の日常サポート機能も重視したい</span>
+            <span class="quick-guide-type">サポート機能付きモデルを見る →</span>
+          </a>
+        </div>
+      </div>
+
       <nav class="toc" aria-label="目次">
         <p class="toc-title">目次</p>
         <ol>
           <li><a href="#types">子ども乗せ電動自転車のタイプ</a></li>
           <li><a href="#howto">選び方の比較軸（5つの視点）</a></li>
-          <li><a href="#table">6車種の比較表</a></li>
+          <li><a href="#mini-compare">目的別の簡易比較</a></li>
+          <li><a href="#table">全車種の仕様を詳しく比較する</a></li>
           <li><a href="#products">車種ごとの特徴</a></li>
           <li><a href="#quiz">30秒タイプ診断</a></li>
           <li><a href="#faq">よくある質問</a></li>
@@ -161,9 +193,174 @@
     </div>
   </section>
 
+  <!-- 目的別の簡易比較 -->
+  <section class="section" id="mini-compare">
+    <h2 class="section-title">目的別の簡易比較</h2>
+    <p class="section-lead">
+      くわしい仕様表の前に、目的別の候補を3つまでにしぼって紹介します。候補の選定は、掲載しているメーカー公式仕様にもとづいています。
+      同じ車種が複数の目的に登場することもあります。
+    </p>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">価格を抑えたい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-annysdx">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">パナソニック ギュット・アニーズ・DX</span>
+            <span class="mini-compare-price">180,000円</span>
+          </div>
+          <span class="mini-compare-type">後ろ乗せ標準・前乗せ追加対応</span>
+          <p class="mini-compare-reason">今回の掲載車種の中で最も価格を抑えやすい構成。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-pasbabby">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">ヤマハ PAS babby</span>
+            <span class="mini-compare-price">189,000円</span>
+          </div>
+          <span class="mini-compare-type">後ろ乗せ標準・前乗せ追加対応</span>
+          <p class="mini-compare-reason">夫婦での共用を想定した設計で、価格帯は後ろ乗せ標準モデルの中では標準的。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-croomrdx">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">パナソニック ギュット・クルームR・DX</span>
+            <span class="mini-compare-price">189,000円</span>
+          </div>
+          <span class="mini-compare-type">後ろ乗せ標準・前乗せ追加対応</span>
+          <p class="mini-compare-reason">同価格帯で、Uフレーム低床設計や空気圧低下お知らせ機能などの日常サポート機能が加わる。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">2人同乗を前提に長く使いたい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-annysdx">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">パナソニック ギュット・アニーズ・DX</span>
+            <span class="mini-compare-price">180,000円</span>
+          </div>
+          <span class="mini-compare-type">後ろ乗せ標準・前乗せ追加対応</span>
+          <p class="mini-compare-reason">プレミアムリアチャイルドシートを標準装備し、前乗せは別売オプションで追加できる。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-croomrdx">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">パナソニック ギュット・クルームR・DX</span>
+            <span class="mini-compare-price">189,000円</span>
+          </div>
+          <span class="mini-compare-type">後ろ乗せ標準・前乗せ追加対応</span>
+          <p class="mini-compare-reason">アニーズ・DXと同じバッテリー容量・走行距離を持ちながら低床設計を採用。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-mobdd">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">ブリヂストン bikke MOB dd</span>
+            <span class="mini-compare-price">196,800円</span>
+          </div>
+          <span class="mini-compare-type">走行性能重視（両輪駆動）</span>
+          <p class="mini-compare-reason">後ろ乗せが標準で、前乗せは別売オプションで追加できる。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">自転車に不慣れ・小柄な人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-polare">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">ブリヂストン bikke POLAR e</span>
+            <span class="mini-compare-price">191,800円</span>
+          </div>
+          <span class="mini-compare-type">前乗せ標準</span>
+          <p class="mini-compare-reason">自転車に不慣れな方・小柄な方向けと公式に訴求され、前後20インチの小径タイヤで低重心設計。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-paskiss">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">ヤマハ PAS kiss</span>
+            <span class="mini-compare-price">191,000円</span>
+          </div>
+          <span class="mini-compare-type">前乗せ標準</span>
+          <p class="mini-compare-reason">繭型のフロントチャイルドシート「コクーンルームプラス」を標準装備した前乗せ標準モデル。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">坂道や長距離の送り迎えが多い人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-mobdd">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">ブリヂストン bikke MOB dd</span>
+            <span class="mini-compare-price">196,800円</span>
+          </div>
+          <span class="mini-compare-type">走行性能重視（両輪駆動）</span>
+          <p class="mini-compare-reason">エコモードで一充電あたり約180kmという突出した走行距離が公式に示されている。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-annysdx">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">パナソニック ギュット・アニーズ・DX</span>
+            <span class="mini-compare-price">180,000円</span>
+          </div>
+          <span class="mini-compare-type">後ろ乗せ標準・前乗せ追加対応</span>
+          <p class="mini-compare-reason">ロングモードで一充電あたり約86kmの走行距離が公式に示されている。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-croomrdx">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">パナソニック ギュット・クルームR・DX</span>
+            <span class="mini-compare-price">189,000円</span>
+          </div>
+          <span class="mini-compare-type">後ろ乗せ標準・前乗せ追加対応</span>
+          <p class="mini-compare-reason">同じくロングモードで一充電あたり約86kmの走行距離が公式に示されている。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">車体の軽さ・取り回しを重視する人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-polare">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">ブリヂストン bikke POLAR e</span>
+            <span class="mini-compare-price">191,800円</span>
+          </div>
+          <span class="mini-compare-type">前乗せ標準</span>
+          <p class="mini-compare-reason">車体重量30.8kgで、今回の掲載車種の中で最軽量。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-croomrdx">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">パナソニック ギュット・クルームR・DX</span>
+            <span class="mini-compare-price">189,000円</span>
+          </div>
+          <span class="mini-compare-type">後ろ乗せ標準・前乗せ追加対応</span>
+          <p class="mini-compare-reason">車体重量31.1kgで、低床設計により取り回しやすさも公式に訴求されている。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-paskiss">
+          <div class="mini-compare-top">
+            <span class="mini-compare-name">ヤマハ PAS kiss</span>
+            <span class="mini-compare-price">191,000円</span>
+          </div>
+          <span class="mini-compare-type">前乗せ標準</span>
+          <p class="mini-compare-reason">車体重量31.2kgで、20インチの小径タイヤを採用。</p>
+          <span class="mini-compare-link">くわしく見る →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- 比較表 -->
   <section class="section" id="table">
-    <h2 class="section-title">6車種の比較表</h2>
+    <h2 class="section-title">全車種の仕様を詳しく比較する（6車種）</h2>
     <p class="section-lead">
       各車種の詳しい説明は<a href="#products">車種ごとの特徴</a>へ。
       <span class="chip-unverified">要確認</span>＝公式情報で確認できず、<span class="chip-recheck">要再確認</span>＝情報源間で表記が異なる等、公式資料での再確認を予定。
@@ -379,7 +576,7 @@
     <h2 class="section-title">車種ごとの特徴</h2>
     <p class="section-lead">
       並び順は「後ろ乗せ標準・前乗せ追加対応 → 前乗せ標準 → 走行性能重視」のタイプ順です。順位ではありません。
-      各車種の「こんな家庭の候補に」は、公式仕様から整理した目安です。商品写真は現時点では掲載していません。
+      各車種の「向いている人」「向いていない人」「購入前の注意点」は、公式仕様から整理した目安です。商品写真は現時点では掲載していません。
     </p>
     <p class="pr-note-inline">※本ページには広告・PRリンクが含まれます。<a href="ads-policy.html">広告の方針</a></p>
 
@@ -402,14 +599,19 @@
         <li>車体重量32.0kg／タイヤ20×2.125HE／内装3段変速</li>
         <li>BAA基準：適合／SGマーク：要確認</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「後ろ乗せを軸に長く使いたい」「価格を抑えつつ主要メーカーの標準構成にしたい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>後ろ乗せを軸に長く使いたい人、価格を抑えつつ主要メーカーの標準構成にしたい人。</p>
+        <p><strong>向いていない人：</strong>前乗せを標準装備で使いたい人、日常サポート機能（空気圧チェック等）を重視する人。</p>
+        <p><strong>購入前の注意点：</strong>前乗せは別売のチャイルドシートを追加する構成です。SGマークの明記は公式ページ上で確認できていません。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所（Amazonアソシエイト） -->
         <span class="shoplink">Amazonで見る（準備中）</span>
         <!-- TODO: アフィリエイトリンク設置箇所（楽天アフィリエイト） -->
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://cycle.panasonic.com/products/gyutto_annys_dx/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/5645b964.98f82d44.5645b965.c4ac8032/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcyclemall%2F77972%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://cycle.panasonic.com/products/gyutto_annys_dx/" target="_blank" rel="noopener">公式サイトで見る</a>
         <span class="shoplink-note">※ 購入リンクは準備中です。現在は各販売サイトで車種名を検索してください。</span>
       </div>
     </article>
@@ -432,13 +634,18 @@
         <li>車体重量31.1kg／空気圧低下お知らせ機能・液晶スイッチ</li>
         <li>BAA基準：適合／SGマーク：要確認</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「後ろ乗せの標準構成に、空気圧チェック等の日常サポート機能も欲しい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>後ろ乗せの標準構成に、空気圧チェック等の日常サポート機能も欲しい人。</p>
+        <p><strong>向いていない人：</strong>今回の掲載車種の中でより価格を抑えたい人。</p>
+        <p><strong>購入前の注意点：</strong>前乗せは別売のチャイルドシートを追加する構成です。SGマークの明記は公式ページ上で確認できていません。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://cycle.panasonic.com/products/gyutto_croomr_dx/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/5645b964.98f82d44.5645b965.c4ac8032/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcyclemall%2F93280%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://cycle.panasonic.com/products/gyutto_croomr_dx/" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -460,13 +667,18 @@
         <li>車体重量33.3kg／スタンド連動ハンドルストッパーで横転防止</li>
         <li>BAA基準：要確認／SGマーク：要確認</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「夫婦で共用しやすい後ろ乗せモデルを重視する」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>夫婦で共用しやすい後ろ乗せモデルを重視する人。</p>
+        <p><strong>向いていない人：</strong>BAA基準の適合を確認してから選びたい人。</p>
+        <p><strong>購入前の注意点：</strong>BAA基準・SGマークの明記は公式ページ上で確認できていません。公式の幼児2人同乗基準の説明ページでは旧モデル名の記載が残っており、表記の食い違いが確認されています。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://www.yamaha-motor.co.jp/pas/lineup/babby/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/5645b964.98f82d44.5645b965.c4ac8032/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcyclemall%2F98841%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://www.yamaha-motor.co.jp/pas/lineup/babby/" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -489,13 +701,18 @@
         <li>車体重量30.8kg（今回の掲載車種で最軽量）／両輪駆動・自動充電機能</li>
         <li>BAA基準：適合／SGマーク：要確認</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「自転車に不慣れ」「小柄で足つきを重視したい」保護者が前乗せから始めたい家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>自転車に不慣れな人、小柄で足つきを重視したい人、車体の軽さを重視したい人。</p>
+        <p><strong>向いていない人：</strong>後ろ乗せチャイルドシートへの対応可否を確認してから選びたい人。</p>
+        <p><strong>購入前の注意点：</strong>後ろ乗せチャイルドシートへの対応可否は公式ページ上で確認できませんでした。公式オンラインストアには2026年6月発売予定という表記が残っており、現在の正確な販売状況は要再確認です。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
         <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://www.bscycle.co.jp/items/e-bicycle/bikke/polar/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://www.bscycle.co.jp/items/e-bicycle/bikke/polar/" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -516,13 +733,18 @@
         <li>車体重量31.2kg／20インチ小径タイヤ</li>
         <li>BAA基準：要確認／SGマーク：要確認</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「前乗せ中心で、小径タイヤによる取り回しを重視したい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>前乗せ中心で使いたい人、小径タイヤによる取り回しを重視したい人。</p>
+        <p><strong>向いていない人：</strong>後ろ乗せチャイルドシートへの対応可否を確認してから選びたい人。</p>
+        <p><strong>購入前の注意点：</strong>後ろ乗せチャイルドシートを追加できるかどうかは、公式ページ・適合表いずれからも確認できませんでした。BAA基準・SGマークの明記も公式ページ上で確認できていません。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://www.yamaha-motor.co.jp/pas/lineup/kiss/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/5645b964.98f82d44.5645b965.c4ac8032/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcyclemall%2F98840%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://www.yamaha-motor.co.jp/pas/lineup/kiss/spec.html" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -545,13 +767,18 @@
         <li>車体重量33.5kg／前24×1.75HE・後20×2.125HEの異径タイヤ</li>
         <li>BAA基準：要確認（「安全・環境基準適合車」表記のみ確認）／SGマーク：要確認</li>
       </ul>
-      <div class="fit-box"><strong>こんな家庭の候補に：</strong>「坂道や長距離の送り迎えで走行距離・安定感を重視したい」家庭の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>坂道や長距離の送り迎えで走行距離・安定感を重視したい人。</p>
+        <p><strong>向いていない人：</strong>今回の掲載車種の中で価格を抑えたい人、車体重量の軽さを重視したい人（33.5kg）。</p>
+        <p><strong>購入前の注意点：</strong>BAA基準は「安全・環境基準適合車」という表記のみ確認でき、SGマークの明記は公式ページ上で確認できていません。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
         <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://www.bscycle.co.jp/items/e-bicycle/bikke/mob/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://www.bscycle.co.jp/items/e-bicycle/bikke/mob/" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -654,6 +881,7 @@
         <li><a href="sakunyuki.html">搾乳機の比較</a></li>
         <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
         <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
+        <li><a href="chiiku.html">知育用品の比較</a></li>
         <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
         <li><a href="about.html">運営方針・編集ポリシー</a></li>
         <li><a href="ads-policy.html">アフィリエイト広告について</a></li>

@@ -12,20 +12,30 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
-      <span class="brand-logo">こそだて比較ノート<span class="brand-dot">．</span></span>
-      <span class="brand-tag">（サイト名仮）</span>
+      <span class="brand-logo">こそだて比較ノート</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="global-nav">メニュー ☰</button>
     <nav class="global-nav" id="global-nav" aria-label="サイト内メニュー">
       <ul>
         <li><a href="index.html">ホーム</a></li>
-        <li><a href="sakunyuki.html">搾乳機の比較</a></li>
-        <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
-        <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
-        <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
-        <li><a href="about.html">運営方針</a></li>
-        <li><a href="ads-policy.html">広告について</a></li>
-        <li><a href="privacy.html">プライバシー</a></li>
+        <li class="nav-has-sub">
+          <button class="nav-sub-toggle" aria-expanded="false">比較カテゴリ <span class="nav-caret" aria-hidden="true">▾</span></button>
+          <ul class="nav-submenu">
+            <li><a href="sakunyuki.html">搾乳機の比較</a></li>
+            <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
+            <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
+            <li><a href="chiiku.html">知育用品の比較</a></li>
+            <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
+          </ul>
+        </li>
+        <li class="nav-has-sub">
+          <button class="nav-sub-toggle" aria-expanded="false">運営情報 <span class="nav-caret" aria-hidden="true">▾</span></button>
+          <ul class="nav-submenu">
+            <li><a href="about.html">運営方針</a></li>
+            <li><a href="ads-policy.html">広告について</a></li>
+            <li><a href="privacy.html">プライバシー</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </div>
@@ -59,11 +69,27 @@
         仕様はすべてメーカー公式サイト・公式オンラインショップ・公式プレスリリースで確認し、
         確認できなかった項目は<span class="chip-unverified">未確認</span>と表示しています。
       </p>
-      <div class="note-box">
-        【このページの読み方】
-        当サイトでは掲載商品の使用レビューは行っていません。「使いやすい」「痛くない」といった体験談ではなく、
-        公式仕様から確認できる事実と、そこから整理できる「どんな使い方の候補になり得るか」をお伝えします。
-        <span class="chip-unverified">未確認</span>…公式情報で確認できず／<span class="chip-recheck">要再確認</span>…公式情報の再確認を予定している項目
+      <div class="quick-guide" id="quick-guide">
+        <h2 class="quick-guide-heading">まずは使い方から候補を絞る</h2>
+        <p class="quick-guide-lead">詳しい説明を読む前に、近い条件を選んでみてください。あとから詳しい比較表・商品説明もご覧いただけます。</p>
+        <div class="quick-guide-grid">
+          <a class="card quick-guide-item" href="#p-e402">
+            <span class="quick-guide-cond">たまに使う／予算を抑えたい</span>
+            <span class="quick-guide-type">手動タイプを見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-e403">
+            <span class="quick-guide-cond">ほぼ毎日使う</span>
+            <span class="quick-guide-type">電動タイプを見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-e401">
+            <span class="quick-guide-cond">上の子のお世話や家事をしながら使いたい</span>
+            <span class="quick-guide-type">ハンズフリータイプを見る →</span>
+          </a>
+          <a class="card quick-guide-item" href="#p-freestyle-mini">
+            <span class="quick-guide-cond">搾乳時間をできるだけ短くしたい</span>
+            <span class="quick-guide-type">両胸同時対応タイプを見る →</span>
+          </a>
+        </div>
       </div>
 
       <nav class="toc" aria-label="目次">
@@ -71,7 +97,8 @@
         <ol>
           <li><a href="#types">搾乳機の3タイプと「片胸／両胸」</a></li>
           <li><a href="#howto">使い方別の選び方（5つの視点）</a></li>
-          <li><a href="#table">10商品の比較表</a></li>
+          <li><a href="#mini-compare">目的別の簡易比較</a></li>
+          <li><a href="#table">全商品の仕様を詳しく比較する</a></li>
           <li><a href="#products">商品ごとの特徴</a></li>
           <li><a href="#quiz">30秒タイプ診断</a></li>
           <li><a href="#faq">よくある質問</a></li>
@@ -159,9 +186,138 @@
     </div>
   </section>
 
+  <!-- 目的別の簡易比較（スマホ向け小型ブロック） -->
+  <section class="section" id="mini-compare">
+    <h2 class="section-title">目的別の簡易比較</h2>
+    <p class="section-lead">
+      スマホでも読みやすいよう、目的別に候補を最大3商品まで絞った簡易版です。詳しい仕様はこの下の「全商品の仕様を詳しく比較する」でご確認ください。
+      候補の選定は、下記の比較表・商品説明に記載した公式仕様を根拠にしています。
+    </p>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">低予算で選びたい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-e402">
+          <div class="mini-compare-top"><span class="mini-compare-name">ベビースマイル 手動さく乳器 E-402</span><span class="mini-compare-price">3,480円</span></div>
+          <span class="mini-compare-type">手動</span>
+          <p class="mini-compare-reason">今回の掲載商品の中で最も価格を抑えられるモデルです。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-harmony">
+          <div class="mini-compare-top"><span class="mini-compare-name">メデラ ハーモニー手動さく乳器</span><span class="mini-compare-price">4,400円</span></div>
+          <span class="mini-compare-type">手動</span>
+          <p class="mini-compare-reason">手動の定番メーカー品を低価格で求める場合の候補です。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-e401">
+          <div class="mini-compare-top"><span class="mini-compare-name">ベビースマイル ハンズフリー電動 E-401</span><span class="mini-compare-price">6,580円</span></div>
+          <span class="mini-compare-type">ハンズフリー電動</span>
+          <p class="mini-compare-reason">ハンズフリー型の中で最も価格を抑えられるモデルです。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">毎日使う人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-propersonal">
+          <div class="mini-compare-top"><span class="mini-compare-name">ピジョン pro personal R</span><span class="mini-compare-price">20,350円</span></div>
+          <span class="mini-compare-type">電動</span>
+          <p class="mini-compare-reason">3モード×6段階の細かい吸引調整があり、将来の両胸拡張にも対応します。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-handyfit">
+          <div class="mini-compare-top"><span class="mini-compare-name">ピジョン handy fit+</span><span class="mini-compare-price">13,200円</span></div>
+          <span class="mini-compare-type">電動</span>
+          <p class="mini-compare-reason">2026年2月にコードレス化した国内定番メーカーの電動モデルです。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-solo">
+          <div class="mini-compare-top"><span class="mini-compare-name">メデラ ソロ電動さく乳器</span><span class="mini-compare-price">12,100円</span></div>
+          <span class="mini-compare-type">電動</span>
+          <p class="mini-compare-reason">自宅中心で定期的に使う場合の電動候補です。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">ハンズフリーを選びたい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-e401">
+          <div class="mini-compare-top"><span class="mini-compare-name">ベビースマイル E-401</span><span class="mini-compare-price">6,580円</span></div>
+          <span class="mini-compare-type">ハンズフリー電動</span>
+          <p class="mini-compare-reason">ハンズフリー型を最も低価格で試せるモデルです。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-solo-hf">
+          <div class="mini-compare-top"><span class="mini-compare-name">メデラ ソロ ハンズフリー電動</span><span class="mini-compare-price">18,700円</span></div>
+          <span class="mini-compare-type">ハンズフリー電動</span>
+          <p class="mini-compare-reason">洗浄パーツが3点と少なく、アプリ連携にも対応します。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-freestyle-mini">
+          <div class="mini-compare-top"><span class="mini-compare-name">メデラ フリースタイルミニ</span><span class="mini-compare-price">26,950円</span></div>
+          <span class="mini-compare-type">ハンズフリー電動（両胸）</span>
+          <p class="mini-compare-reason">ハンズフリーかつ両胸同時に対応する新モデルです。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">時短を重視する人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-freestyle-mini">
+          <div class="mini-compare-top"><span class="mini-compare-name">メデラ フリースタイルミニ</span><span class="mini-compare-price">26,950円</span></div>
+          <span class="mini-compare-type">ハンズフリー電動・両胸同時</span>
+          <p class="mini-compare-reason">今回の掲載商品で唯一、標準構成のまま両胸同時に対応します。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-propersonal">
+          <div class="mini-compare-top"><span class="mini-compare-name">ピジョン pro personal R</span><span class="mini-compare-price">20,350円</span></div>
+          <span class="mini-compare-type">電動（別売キットで両胸）</span>
+          <p class="mini-compare-reason">別売の「さく乳ボトルキット」を追加すると両胸同時に拡張できます。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-e401">
+          <div class="mini-compare-top"><span class="mini-compare-name">ベビースマイル E-401</span><span class="mini-compare-price">6,580円</span></div>
+          <span class="mini-compare-type">ハンズフリー電動（2個で両胸可）</span>
+          <p class="mini-compare-reason">本体を2個使うことで両胸同時に対応でき、比較的低価格で試せます。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mini-compare-group">
+      <h3 class="mini-compare-heading">お手入れの負担を減らしたい人向け</h3>
+      <div class="mini-compare-cards">
+        <a class="card mini-compare-card" href="#p-solo-hf">
+          <div class="mini-compare-top"><span class="mini-compare-name">メデラ ソロ ハンズフリー電動</span><span class="mini-compare-price">18,700円</span></div>
+          <span class="mini-compare-type">ハンズフリー電動</span>
+          <p class="mini-compare-reason">洗浄が必要な必須パーツが3点と、今回の掲載商品の中でも少ない構成です。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-freestyle-mini">
+          <div class="mini-compare-top"><span class="mini-compare-name">メデラ フリースタイルミニ</span><span class="mini-compare-price">26,950円</span></div>
+          <span class="mini-compare-type">ハンズフリー電動（両胸）</span>
+          <p class="mini-compare-reason">洗浄パーツが片胸あたり3点で、両胸同時対応の中では少なめです。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+        <a class="card mini-compare-card" href="#p-solo">
+          <div class="mini-compare-top"><span class="mini-compare-name">メデラ ソロ電動さく乳器</span><span class="mini-compare-price">12,100円</span></div>
+          <span class="mini-compare-type">電動</span>
+          <p class="mini-compare-reason">公式ページで洗浄パーツが少ない設計であることが紹介されています。</p>
+          <span class="mini-compare-link">詳しい説明を見る →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- 比較表 -->
   <section class="section" id="table">
-    <h2 class="section-title">10商品の比較表</h2>
+    <h2 class="section-title">全商品の仕様を詳しく比較する（10商品）</h2>
     <p class="section-lead">
       各商品の詳しい説明は<a href="#products">商品ごとの特徴</a>へ。
       <span class="chip-unverified">未確認</span>＝公式情報で確認できず、<span class="chip-recheck">要再確認</span>＝公式資料での再確認を予定。
@@ -315,7 +471,7 @@
     <h2 class="section-title">商品ごとの特徴</h2>
     <p class="section-lead">
       並び順は「手動 → 電動 → ハンズフリー」のタイプ順・価格順です。順位ではありません。
-      各商品の「こんな使い方の候補に」は、公式仕様から整理した目安です。
+      各商品の「向いている人」「向いていない人」「購入前の注意点」は、公式仕様から整理した目安です。
     </p>
     <p class="pr-note-inline">※本ページには広告・PRリンクが含まれます。<a href="ads-policy.html">広告の方針</a></p>
 
@@ -337,15 +493,18 @@
         <li>煮沸○・薬液○（レンジは記載なし）</li>
         <li>付属乳首で授乳可</li>
       </ul>
-      <div class="fit-box"><strong>こんな使い方の候補に：</strong>「たまに搾乳できれば十分」「まず低予算で1台試したい」「電源のない場所で使いたい」を重視する場合の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>たまに搾乳できれば十分な人、初期費用を抑えたい人、電源のない場所でも使いたい人。</p>
+        <p><strong>向いていない人：</strong>毎日何度も搾乳する人、手で操作する負担を避けたい人。</p>
+        <p><strong>購入前の注意点：</strong>手動のため、使用頻度が高い場合は手や時間の負担が増えます。電子レンジ消毒対応の記載はありません。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所（Amazonアソシエイト） -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <!-- TODO: アフィリエイトリンク設置箇所（楽天アフィリエイト） -->
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://shop.babysmile-info.jp/view/item/000000000152 -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
-        <span class="shoplink-note">※ 購入リンクは準備中です。現在は各販売サイトで商品名を検索してください。</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/5630e797.ef4c8c46.5630e798.0f44055e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fseastar%2F1240202903%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://shop.babysmile-info.jp/view/item/000000000152" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -366,13 +525,18 @@
         <li>重量：公式情報で確認できず</li>
         <li>消毒方法：公式情報で確認できず（取説確認予定）</li>
       </ul>
-      <div class="fit-box"><strong>こんな使い方の候補に：</strong>「手動の定番メーカー品がいい」「持ち運びやすさを重視したい」場合の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>手動の定番メーカー品を求める人、持ち運びやすさを重視する人。</p>
+        <p><strong>向いていない人：</strong>毎日何度も搾乳する人（手動のため負担が増えやすくなります）。</p>
+        <p><strong>購入前の注意点：</strong>本体重量・消毒方法（煮沸／レンジ／薬液）が公式ページ上で確認できていません。事前にメーカーへの確認をおすすめします。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://www.medelaonline.jp/shopdetail/000000000216/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/5637a258.5163f044.5637a259.10deb12b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmedela%2F101041159%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://www.medelaonline.jp/shopdetail/000000000216/" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -393,13 +557,18 @@
         <li>煮沸○・レンジ✕・薬液○</li>
         <li>公式サポートに部品案内あり</li>
       </ul>
-      <div class="fit-box"><strong>こんな使い方の候補に：</strong>「国内で部品を入手しやすい手動がいい」「手の負担を減らす工夫を重視したい」場合の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>国内メーカーで部品を入手しやすい手動を求める人、手の負担を減らす工夫（可変ハンドル）を重視する人。</p>
+        <p><strong>向いていない人：</strong>毎日何度も搾乳する人、電子レンジでの消毒を習慣にしたい人。</p>
+        <p><strong>購入前の注意点：</strong>電子レンジ消毒には非対応と公式に明記されています。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://products.pigeon.co.jp/item/index-2775.html -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/5637aa73.07289fce.5637aa74.d12689ad/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmatsuyoshi-web%2F00888259%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://products.pigeon.co.jp/item/index-2775.html" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -421,13 +590,18 @@
         <li>USB充電・満充電から約70分使用（レベル9時）</li>
         <li>洗浄パーツ5点・煮沸○・薬液○</li>
       </ul>
-      <div class="fit-box"><strong>こんな使い方の候補に：</strong>「電動を試したいが予算は1万円未満」「コードレスで場所を選ばず使いたい」場合の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>電動を試したいが予算は1万円未満に抑えたい人、コードレスで場所を選ばず使いたい人。</p>
+        <p><strong>向いていない人：</strong>1回あたりの使用時間が長い人（満充電での使用時間が約70分と、今回の掲載電動モデルの中では短めです）。</p>
+        <p><strong>購入前の注意点：</strong>電子レンジ消毒対応の記載はありません。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://shop.babysmile-info.jp/view/item/000000000151 -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/5630e797.ef4c8c46.5630e798.0f44055e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fseastar%2F1240302904%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://shop.babysmile-info.jp/view/item/000000000151" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -447,11 +621,17 @@
         <li>準備／搾乳モード（レベル数は要再確認）</li>
         <li>PPSU製ボトル150ml付属</li>
       </ul>
-      <div class="fit-box"><strong>こんな使い方の候補に：</strong>「自宅中心で定期的に搾乳する」「洗い物の少なさを重視したい」場合の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>自宅中心で定期的に搾乳する人、洗い物の少なさを重視する人。</p>
+        <p><strong>向いていない人：</strong>外出先での使用頻度が高い人（ハンズフリーではなく本体を手で支える必要があります）。</p>
+        <p><strong>購入前の注意点：</strong>洗浄パーツの点数・吸引レベル数は公式資料で再確認を予定しています。消毒方法も公式ページ上で確認できていません。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
         <span class="shoplink">楽天市場で見る（準備中）</span>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
         <!-- 公式: https://www.medelaonline.jp/shopdetail/000000000218/ -->
         <span class="shoplink">公式サイトで見る（準備中）</span>
       </div>
@@ -474,13 +654,18 @@
         <li>充電式コードレス（AC/USB充電）</li>
         <li>煮沸○・レンジ✕・薬液○（電動部除く）</li>
       </ul>
-      <div class="fit-box"><strong>こんな使い方の候補に：</strong>「国内定番メーカーのスタンダード電動がいい」「コードレスで家の中を移動しながら使いたい」場合の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>国内定番メーカーのスタンダード電動を求める人、コードレスで家の中を移動しながら使いたい人。</p>
+        <p><strong>向いていない人：</strong>電子レンジでの消毒を習慣にしたい人、旧モデルの部品をそのまま使い続けたい人。</p>
+        <p><strong>購入前の注意点：</strong>2026年2月のリニューアルで、旧モデル（2022〜2025年）とは電動部・電動本体・弁の部品に互換性がないと公式サポートに明記されています。買い替え・部品購入の際はモデルをご確認ください。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://products.pigeon.co.jp/item/index-2776.html -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/5637aa73.07289fce.5637aa74.d12689ad/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmatsuyoshi-web%2F00888260%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://products.pigeon.co.jp/item/index-2776.html" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -502,13 +687,18 @@
         <li>ACアダプター付属・専用充電池は別売</li>
         <li>煮沸○・レンジ✕・薬液○（チューブ・電動部除く）</li>
       </ul>
-      <div class="fit-box"><strong>こんな使い方の候補に：</strong>「毎日しっかり搾乳する」「吸引モードを細かく選びたい」「将来両胸同時に拡張したい」場合の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>毎日しっかり搾乳する人、吸引モードを細かく選びたい人、将来両胸同時に拡張したい人。</p>
+        <p><strong>向いていない人：</strong>コードレスでの持ち運びを最優先したい人（電源はACアダプターが基本で、コードレス化には別売の専用充電池が必要です）。</p>
+        <p><strong>購入前の注意点：</strong>電子レンジ消毒には非対応と公式に明記されています。両胸同時対応には別売の「さく乳ボトルキット」の追加購入が必要です。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://shop.pigeon.co.jp/products/1034638 -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/5637aa73.07289fce.5637aa74.d12689ad/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmatsuyoshi-web%2F00888261%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://products.pigeon.co.jp/item/index-2777.html" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -530,13 +720,18 @@
         <li>USB充電・約120分使用／30分オートオフ</li>
         <li>洗浄パーツ5点・煮沸○・薬液○</li>
       </ul>
-      <div class="fit-box"><strong>こんな使い方の候補に：</strong>「まずハンズフリーを低予算で試したい」「上の子のお世話と並行したい」場合の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>まずハンズフリーを低予算で試したい人、上のお子さんのお世話や家事と並行したい人。</p>
+        <p><strong>向いていない人：</strong>洗浄パーツの少なさを最優先したい人（洗浄が必要なパーツは5点です）。</p>
+        <p><strong>購入前の注意点：</strong>電子レンジ消毒対応の記載はありません。両胸同時にするには本商品を2個購入する必要があります。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://shop.babysmile-info.jp/view/item/000000000150 -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/5630e797.ef4c8c46.5630e798.0f44055e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fseastar%2F1240102902%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://shop.babysmile-info.jp/view/item/000000000150" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -556,11 +751,17 @@
         <li>洗浄パーツ3点</li>
         <li>Medela Familyアプリ連携</li>
       </ul>
-      <div class="fit-box"><strong>こんな使い方の候補に：</strong>「職場や外出先でも使いたい」「洗い物を最小限にしたい」「搾乳記録をアプリで管理したい」場合の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>職場や外出先でも使いたい人、洗い物を最小限にしたい人、搾乳記録をアプリで管理したい人。</p>
+        <p><strong>向いていない人：</strong>両胸同時での搾乳を重視する人（本商品は片胸用です）。</p>
+        <p><strong>購入前の注意点：</strong>消毒方法（煮沸／レンジ／薬液）は公式ページ上で確認できていません。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/5637a258.5163f044.5637a259.10deb12b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmedela%2F101046738%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
         <!-- 公式: https://www.medelaonline.jp/shopdetail/000000000217/ -->
         <span class="shoplink">公式サイトで見る（準備中）</span>
       </div>
@@ -584,13 +785,18 @@
         <li>9段階調整・最長約2時間駆動</li>
         <li>洗浄パーツ 片胸3点／インサート3サイズ付属</li>
       </ul>
-      <div class="fit-box"><strong>こんな使い方の候補に：</strong>「搾乳時間を最優先で短くしたい」「両手を空けたい」「1日に何度も搾乳する」場合の候補になり得ます。</div>
+      <div class="fit-box">
+        <p><strong>向いている人：</strong>搾乳時間を最優先で短くしたい人、両手を空けたい人、1日に何度も搾乳する人。</p>
+        <p><strong>向いていない人：</strong>初期費用をできるだけ抑えたい人（今回の掲載商品の中で最も価格が高いモデルです）。</p>
+        <p><strong>購入前の注意点：</strong>消毒方法（煮沸／レンジ／薬液）は公式ページ上で確認できていません。2026年5月発売の新モデルのため、レビュー・実績はまだ少ない可能性があります。</p>
+      </div>
       <div class="shoplinks">
         <!-- TODO: アフィリエイトリンク設置箇所 -->
         <span class="shoplink">Amazonで見る（準備中）</span>
-        <span class="shoplink">楽天市場で見る（準備中）</span>
-        <!-- 公式: https://www.medelaonline.jp/shopdetail/000000000238/ -->
-        <span class="shoplink">公式サイトで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://hb.afl.rakuten.co.jp/ichiba/5637a258.5163f044.5637a259.10deb12b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmedela%2F101047777%2F&amp;link_type=hybrid_url&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
+        <!-- TODO: アフィリエイトリンク設置箇所（Yahoo!ショッピング） -->
+        <span class="shoplink">Yahoo!ショッピングで見る（準備中）</span>
+        <a class="shoplink is-live" href="https://www.medelaonline.jp/shopdetail/000000000238/" target="_blank" rel="noopener">公式サイトで見る</a>
       </div>
     </article>
 
@@ -697,6 +903,7 @@
         <li><a href="sakunyuki.html">搾乳機の比較</a></li>
         <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
         <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
+        <li><a href="chiiku.html">知育用品の比較</a></li>
         <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
         <li><a href="about.html">運営方針・編集ポリシー</a></li>
         <li><a href="ads-policy.html">アフィリエイト広告について</a></li>

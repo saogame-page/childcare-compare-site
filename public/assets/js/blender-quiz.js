@@ -58,7 +58,7 @@
     ihb:     { name: "アイリスオーヤマ ハンドブレンダー IHB-M301", price: "価格目安 8,980円", href: "#p-ihb-m301" },
     vhb:     { name: "ビタントニオ ハンドブレンダー VHB-30", price: "価格目安 8,690円", href: "#p-vhb-30" },
     rhb3:    { name: "レコルト ハンディブレンダー フルセット RHB-3", price: "価格目安 7,700円", href: "#p-rhb-3" },
-    mq5:     { name: "ブラウン マルチクイック5 ハンドブレンダー MQ50001M", price: "価格目安 13,800円", href: "#p-mq50001m" },
+    mq5:     { name: "ブラウン マルチクイック5 ハンドブレンダー MQ50001M", price: "価格目安 9,680円", href: "#p-mq50001m" },
     tfal:    { name: "ティファール ハンドブレンダー ベビーマルチ HB65H8JP", price: "価格目安 15,180円", href: "#p-hb65h8jp" },
     bruno:   { name: "BRUNO マルチスティックブレンダー2+Baby BOE142", price: "価格目安 9,350円", href: "#p-boe142" },
     panasonic: { name: "パナソニック ハンドブレンダー MX-S302", price: "オープン価格", href: "#p-mxs302" },

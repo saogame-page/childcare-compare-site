@@ -12,20 +12,30 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
-      <span class="brand-logo">こそだて比較ノート<span class="brand-dot">．</span></span>
-      <span class="brand-tag">（サイト名仮）</span>
+      <span class="brand-logo">こそだて比較ノート</span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="global-nav">メニュー ☰</button>
     <nav class="global-nav" id="global-nav" aria-label="サイト内メニュー">
       <ul>
         <li><a href="index.html">ホーム</a></li>
-        <li><a href="sakunyuki.html">搾乳機の比較</a></li>
-        <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
-        <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
-        <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
-        <li><a href="about.html">運営方針</a></li>
-        <li><a href="ads-policy.html">広告について</a></li>
-        <li><a href="privacy.html">プライバシー</a></li>
+        <li class="nav-has-sub">
+          <button class="nav-sub-toggle" aria-expanded="false">比較カテゴリ <span class="nav-caret" aria-hidden="true">▾</span></button>
+          <ul class="nav-submenu">
+            <li><a href="sakunyuki.html">搾乳機の比較</a></li>
+            <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
+            <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
+            <li><a href="chiiku.html">知育用品の比較</a></li>
+            <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
+          </ul>
+        </li>
+        <li class="nav-has-sub">
+          <button class="nav-sub-toggle" aria-expanded="false">運営情報 <span class="nav-caret" aria-hidden="true">▾</span></button>
+          <ul class="nav-submenu">
+            <li><a href="about.html">運営方針</a></li>
+            <li><a href="ads-policy.html">広告について</a></li>
+            <li><a href="privacy.html">プライバシー</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </div>
@@ -38,19 +48,19 @@
     <div class="container">
       <h1 class="hero-copy">“いちばん人気”より、<br>“わが家に合う”を。</h1>
       <p class="hero-lead">
-        子育て用品の「どれがいい？」は、家庭の生活リズムや使い方によって答えが変わります。
-        このサイトはランキングで1位を決めるのではなく、
-        <strong>それぞれの家庭の使い方に合う商品を見つけやすくする</strong>ことを目的にした比較メディアです。
+        子育て用品は、人気だけでなく、使う頻度・予算・お手入れの負担・家庭の生活スタイルによって合う商品が変わります。
+        このサイトでは、メーカー公式情報をもとに商品を整理し、<strong>「どんな家庭や使い方に合いやすいか」</strong>という視点から比較しています。
+        ランキングだけでは選びにくい商品を、わが家の条件から探せます。
       </p>
       <p class="hero-sub">メーカー公式情報をもとに整理し、確認できていない情報は「未確認」と正直に表示します。</p>
       <p style="margin-top:20px;">
-        <a class="btn btn-primary" href="sakunyuki.html">搾乳機の比較を見る</a>
+        <a class="btn btn-primary" href="#categories">比較する商品を選ぶ</a>
       </p>
     </div>
   </section>
 
   <!-- カテゴリ -->
-  <section class="section">
+  <section class="section" id="categories">
     <div class="container">
       <h2 class="section-title">比較できるカテゴリ</h2>
       <p class="section-lead">「搾乳機」「離乳食ブレンダー」「ベビーモニター」「子ども乗せ電動自転車」からスタートしました。カテゴリは今後すこしずつ増やしていきます。</p>
@@ -74,42 +84,24 @@
           <p>Wi-Fi不要の専用モニター型から、スマホアプリ型・AI高機能型まで。住宅環境とセキュリティの考え方から、わが家に合う1台を整理します。タイプ診断つき。</p>
         </a>
 
-        <div class="card category-card is-coming" aria-disabled="true">
+        <a class="card category-card" href="chiiku.html" style="text-decoration:none;">
           <span class="cat-emoji" aria-hidden="true">🧩</span>
-          <h3>知育用品 <span class="badge badge-soon">準備中</span></h3>
-          <p>月齢・興味・収納スペースなど、家庭ごとの条件から選び方を整理する予定です。</p>
-        </div>
+          <h3>知育用品 <span class="badge badge-open">公開中</span></h3>
+          <p>月齢・興味・収納スペースなど、家庭ごとの条件から選び方を整理します。まずはマグネットブロックから公開しました。</p>
+        </a>
 
         <a class="card category-card" href="kidsbike.html" style="text-decoration:none;">
           <span class="cat-emoji" aria-hidden="true">🚲</span>
           <h3>子ども乗せ電動自転車 <span class="badge badge-open">公開中</span></h3>
           <p>前乗せ標準タイプから後ろ乗せ王道タイプ、走行性能重視タイプまで。送り迎えの距離・坂道・保護者の体格から、わが家に合う1台を整理します。タイプ診断つき。</p>
         </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- サイトの考え方 -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">このサイトの3つの約束</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>1. 公式情報から出発する</h3>
-          <p style="font-size:0.9rem;">商品仕様はメーカー公式サイト・公式資料を最優先で確認します。確認できない項目は推測せず「公式情報で確認できず」と表示します。</p>
-        </div>
-        <div class="card">
-          <h3>2. 「1位」を決めない</h3>
-          <p style="font-size:0.9rem;">すべての家庭に共通する“最強の1台”はないと考えています。順位ではなく「どんな使い方に合うか」で商品を整理します。</p>
-        </div>
-        <div class="card">
-          <h3>3. 広告と評価を分ける</h3>
-          <p style="font-size:0.9rem;">将来的にアフィリエイト広告を利用する予定ですが、広告の有無や報酬の大小は商品の掲載順や説明内容に影響させません。</p>
-        </div>
+        <a class="card category-card" href="ninshin-shussan.html" style="text-decoration:none;">
+          <span class="cat-emoji" aria-hidden="true">🤰</span>
+          <h3>妊娠・出産用品 <span class="badge badge-open">公開中</span></h3>
+          <p>医療機器の分類・認証番号など公式情報にもとづいて整理します。まずは家庭用胎児心音計から公開しました。</p>
+        </a>
       </div>
-      <p style="margin-top:18px;">
-        <a class="btn btn-ghost" href="about.html">運営方針・編集ポリシーを読む</a>
-      </p>
     </div>
   </section>
 
@@ -123,6 +115,7 @@
         <li><a href="sakunyuki.html">搾乳機の比較</a></li>
         <li><a href="blender.html">離乳食ブレンダーの比較</a></li>
         <li><a href="babymonitor.html">ベビーモニターの比較</a></li>
+        <li><a href="chiiku.html">知育用品の比較</a></li>
         <li><a href="kidsbike.html">子ども乗せ電動自転車の比較</a></li>
         <li><a href="about.html">運営方針・編集ポリシー</a></li>
         <li><a href="ads-policy.html">アフィリエイト広告について</a></li>
