@@ -277,6 +277,28 @@ h4 { font-size: 1rem; margin: 1.4em 0 0.4em; }
 }
 .compare-table .row-label { white-space: nowrap; }
 
+.product-axis-table { min-width: 1900px; }
+.product-axis-table th, .product-axis-table td { min-width: 140px; }
+.product-axis-table .product-column {
+  width: 210px; min-width: 210px; max-width: 210px;
+  position: sticky; left: 0; z-index: 2;
+  background: #fdfcf9; box-shadow: 1px 0 0 var(--c-line);
+}
+.product-axis-table thead .product-column {
+  z-index: 4; background: var(--c-primary-pale);
+}
+.product-axis-table tbody .product-column {
+  white-space: normal; font-weight: 600;
+}
+.product-axis-table .product-column a {
+  display: block; color: var(--c-primary-deep); line-height: 1.45;
+}
+.product-image-placeholder {
+  display: grid; place-items: center; width: 100%; aspect-ratio: 4 / 3;
+  margin-bottom: 8px; border: 1px dashed var(--c-line); border-radius: 6px;
+  background: var(--c-bg); color: var(--c-ink-soft); font-size: 0.72rem;
+}
+
 .chip-unverified, .chip-recheck {
   display: inline-block; font-size: 0.72rem; padding: 1px 8px;
   border-radius: 999px; white-space: nowrap;
@@ -474,4 +496,7 @@ h4 { font-size: 1rem; margin: 1.4em 0 0.4em; }
   .card { padding: 16px; }
   .quiz { padding: 18px 16px; }
   .compare-table tbody th { min-width: 9em; }
+  .product-axis-table .product-column {
+    width: 132px; min-width: 132px; max-width: 132px;
+  }
 }
